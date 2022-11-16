@@ -1,0 +1,22 @@
+#rectangle_1 {
+	top: 0px;
+	left: 0px;
+	width: 1280px;
+	height: 359px;
+	background:rgba(66.94,153.45,255,1);
+}
+
+#__p__travarokail {
+	top: 0px;
+	left: 0px;
+	width: 289px;
+	height: 83px;
+	overflow: hidden;
+	font-family: Inria Sans;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: left;
+	color:#FFFFFF;
+    position: fixed;
+    left: 20px;
+}

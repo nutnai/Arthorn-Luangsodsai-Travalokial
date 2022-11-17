@@ -29,7 +29,6 @@ if (user) {
 }
 
 async function usernameIsExits() {
-    console.log("hi");
     var username = document.getElementById("username");
     var password = document.getElementById("password");
     const dbUsers = await getDocs(collection(db, "account"));

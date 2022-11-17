@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+    <body>
+        <script type="module" src="../src/auth.js"></script>
+        <div id="rectangle_1"></div>
+        <input type="button" value="back" onclick="location.href = '../index.html';">
+        <p id="__p__travarokail">Travalokail</p>
+        <br><br><br>
+        <form method="post" action="account.html" class="typeAccount">
+            <input type="text" id="username" placeholder="username..." onfocus="document.getElementById('isExitsText').hidden=true;">
+            <input type="password" id="password" placeholder="password..." onfocus="document.getElementById('isExitsText').hidden=true;">
+            <input type="button" value="Login" id="account" onclick="usernameIsExits();">
+        </form>
+        <div hidden="true" id="isExitsText" style="margin-left: 10px; color: red;">wrong username or password</div>
+    </body>
+</html>

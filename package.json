@@ -1,0 +1,23 @@
+{
+  "name": "arthorn-luangsodsai-travalokial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nutnai/Arthorn-Luangsodsai-Travalokial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nutnai/Arthorn-Luangsodsai-Travalokial/issues"
+  },
+  "homepage": "https://github.com/nutnai/Arthorn-Luangsodsai-Travalokial#readme",
+  "dependencies": {
+    "firebase": "^9.14.0"
+  }
+}

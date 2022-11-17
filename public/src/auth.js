@@ -32,23 +32,23 @@ async function usernameIsExits() {
     console.log("hi");
     var username = document.getElementById("username");
     var password = document.getElementById("password");
-    // const dbUsers = await getDocs(collection(db, "account"));
-    // var exits = false;
-    // if (String(username.value) != "" && String(password.value) != "") {
-    //     dbUsers.forEach(element => {
-    //         if (String(element.data().hashUsername) == String(username.value) &&
-    //             String(element.data().hashPassword) == String(password.value)) {
-    //             location.href = "../web/account.html";
-    //             exits = true;
-    //             return;
-    //         }
-    //     });
-    //     if (!exits) {
-    //         console.log("Not exits!");
-    //         document.getElementById("isExitsText").hidden = false;
-    //     }
-    // }
-    userSignIn(username.value, password.value);
+    const dbUsers = await getDocs(collection(db, "account"));
+    var exits = false;
+    if (String(username.value) != "" && String(password.value) != "") {
+        dbUsers.forEach(element => {
+            if (String(element.data().hashUsername) == String(username.value) &&
+                String(element.data().hashPassword) == String(password.value)) {
+                location.href = "../web/account.html";
+                exits = true;
+                return;
+            }
+        });
+        if (!exits) {
+            console.log("Not exits!");
+            document.getElementById("isExitsText").hidden = false;
+        }
+    }
+    // userSignIn(username.value, password.value);
     
 }
 //make function to global (use by other file)

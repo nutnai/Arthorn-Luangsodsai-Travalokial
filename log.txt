@@ -3,3 +3,6 @@
 สิ่งที่ค้างไว้ :
 ระบบล็อกอิน
 คุกกี้
+
+api Rest database ให้ดิว 
+https://firebase.google.com/docs/projects/api/workflow_set-up-and-manage-project

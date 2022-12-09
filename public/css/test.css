@@ -1,0 +1,29 @@
+#b {
+    /* Travarokail */
+
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+font-family: 'Inria Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+
+color: #FFFFFF;
+
+}
+#c {
+    position: absolute;
+width: 1280px;
+height: 359px;
+left: 0px;
+top: 0px;
+
+background: #4399FF;
+
+}

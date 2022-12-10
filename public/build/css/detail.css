@@ -1,0 +1,145 @@
+#sifah{
+    /* Rectangle 1 */
+    position: absolute;
+    width: 1280px;
+    height: 148px;
+    left: 0px;
+    top: 0px;
+
+    background: #4399FF;
+}
+#hua{
+    position: absolute;
+    width: 261.02px;
+    height: 60px;
+    left: 22px;
+    top: 24px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+color: #FFFFFF;
+}
+#roob{
+    position: absolute;
+    width: 71px;
+    height: 73px;
+    left: 1142px;
+    top: 37px;
+
+    border-radius: 217px;
+    background: #c0c8f7;
+}
+#yellow{
+    position: absolute;
+    width: 206px;
+    height: 866px;
+    left: 0px;
+    top: 148px;
+
+    background: #FFEB85;
+}
+#price{
+    position: absolute;
+    width: 155px;
+    height: 53px;
+    left: 22px;
+    top: 248px;
+
+    background: #4399FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+    border: 0px;
+}
+#facility{
+    position: absolute;
+    width: 155px;
+    height: 53px;
+    left: 22px;
+    top: 333px;
+
+    background: #4399FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    border: 0px;
+    color: #FFFFFF;
+}
+#review{
+    position: absolute;
+    width: 155px;
+    height: 53px;
+    left: 22px;
+    top: 418px;
+    background: #4399FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    border: 0px;
+    color: #FFFFFF;
+}
+#home{
+    position: absolute;
+    width: 55px;
+    height: 54px;
+    left: 72px;
+    top: 503px;
+    background: #4399FF;
+    border-radius: 10px;
+    border: 0px;
+}
+#reserve{
+    position: absolute;
+    width: 139px;
+    height: 52px;
+    left: 1094px;
+    top: 166px;
+    background: #FFEB85;
+    border-radius: 20px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+    border: 0px;
+
+    color: #1A3244;
+}
+#hotel{
+    /* Hotel */
+    position: absolute;
+    width: 123px;
+    height: 23px;
+    left: 254px;
+    top: 177px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #1A3244;
+    border: 0px;
+}

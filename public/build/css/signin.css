@@ -1,0 +1,124 @@
+#sifah{
+    /* Rectangle 1 */
+    position: relative;
+    width: 1280px;
+    height: 148px;
+    left: 0px;
+    top: 0px;
+
+    background: #4399FF;
+}
+#hua{
+    position: absolute;
+    width: 261.02px;
+    height: 60px;
+    left: 22px;
+    top: 24px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+#sifah2{
+    position: absolute;
+    width: 549px;
+    height: 571px;
+    left: 365px;
+    top: 195px;
+
+    background: #E7F2FF;
+    border-radius: 10px;
+}
+#huasignin{
+    position: absolute;
+    width: 364px;
+    height: 54px;
+    left: 461px;
+    top: 235px;
+
+    background: #FFEB85;
+    border-radius: 10px;
+}
+#huasigninjing{
+    position: absolute;
+    width: 364px;
+    height: 54px;
+    /*left: 461px;
+    top: 235px; */
+    border: none;
+    
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #000000;
+}
+#saimail{
+    position: absolute;
+    width:323px;
+    height: 56px;
+    left: 478px;
+    top: 337px;
+
+
+    /* background: #ffffff; */
+    border-radius: 10px;
+}
+#saijing{
+    width: 299px;
+    height: 56px;
+    border: none;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    
+    padding-left: 7.43%;
+    color: #1A3244;
+    background: #ffffff;
+    border-radius: 10px;    
+}
+#saijing::placeholder{
+    color: #1a3244a0;
+}
+#saipass{
+    position: absolute;
+    /* width: 323px; */
+    height: 56px;
+    left: 478px;
+    top: 425px;
+
+    /* background: #ffffff; */
+    border-radius: 10px;
+}
+#saipassjing{
+    position: absolute;
+    width: 323px;
+    height: 56px;
+    padding-left: 100%;
+
+    border: none;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #1A3244;
+    background: #ffffff;
+    border-radius: 10px;
+}
+#saipassjing::placeholder{
+    color: #1a3244a0;
+}

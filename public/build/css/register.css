@@ -1,0 +1,113 @@
+#sifah{
+    /* Rectangle 1 */
+    position: relative;
+    width: 1280px;
+    height: 148px;
+    left: 0px;
+    top: 0px;
+
+    background: #4399FF;
+}
+#hua{
+    position: absolute;
+    width: 261.02px;
+    height: 60px;
+    left: 22px;
+    top: 24px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+#roob{
+    position: absolute;
+    width: 71px;
+    height: 73px;
+    left: 1142px;
+    top: 37px;
+
+    border-radius: 217px;
+    background: #c0c8f7;
+}
+
+#block{
+    position: absolute;
+    width: 549px;
+    height: 571px;
+    left: 365px;
+    top: 195px;
+
+
+    background: #E7F2FF;
+    border-radius: 10px;
+    }
+
+#yellow{
+    position: absolute;
+    width: 364px;
+    height: 54px;
+    left: 461px;
+    top: 235px;
+
+    background: #FFEB85;
+    border-radius: 10px;
+}
+
+#registerwithus{
+    position: absolute;
+    width: 276px;
+    height: 28px;
+    left: 510px;
+    top: 225px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #000000;
+}
+#roob2{
+    position: absolute;
+    width: 48px;
+    height: 52px;
+    left: 413px;
+    top: 337px;
+
+    background: #FFFFFF;
+
+}
+#name{
+    position: absolute;
+    width: 323px;
+    height: 56px;
+    left: 478px;
+    top: 337px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+#registerbutton{
+    position: absolute;
+    width: 147px;
+    height: 56px;
+    left: 555px;
+    top: 663px;
+    border: none;
+    background: #4399FF;
+    border-radius: 10px;
+
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF
+}

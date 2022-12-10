@@ -1,20 +1,19 @@
 #sifah{
     /* Rectangle 1 */
-    position: absolute;
+    position: relative;
     width: 1280px;
-    height: 363px;
+    height: 148px;
     left: 0px;
     top: 0px;
 
     background: #4399FF;
 }
-#search{
-    /* Find your next stay... */
+#hua{
     position: absolute;
-    width: 650px;
-    height: 96px;
-    left: 58px;
-    top: 179px;
+    width: 261.02px;
+    height: 60px;
+    left: 22px;
+    top: 24px;
 
     font-family: 'Inria Sans';
     font-style: normal;
@@ -44,21 +43,6 @@
     background: #FFEB85;
     border-radius: 20px;
 }
-#hua{
-    position: absolute;
-    width: 261.02px;
-    height: 60px;
-    left: 22px;
-    top: 24px;
-
-    font-family: 'Inria Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-
-color: #FFFFFF;
-}
 #signin{
     /* Component 3 */
     position: absolute;
@@ -80,24 +64,34 @@ color: #FFFFFF;
     background: #FFEB85;
     border-radius: 20px;
 }
-#yellow{
-    /* Rectangle 10 */
+#sifah2{
     position: absolute;
-    width: 1201px;
-    height: 113px;
-    left: 40px;
-    top: 303px;
+    width: 389px;
+    height: 479px;
+    left: 60px;
+    top: 254px;
 
-    background: #FFEB85;
+    background: #4399FF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 }
-#whereareyougoing{
+#where{
     position: absolute;
-    width: 451px;
-    height: 88px;
-    left: 75px;
-    top: 317px;
+    width: 328px;
+    height: 63px;
+    left: 90px;
+    top: 297px;
+    border: 0px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
 }
 #w{
     position: absolute;
@@ -121,7 +115,6 @@ color: #FFFFFF;
 #w::placeholder{
     position: absolute;
     left: 24.83%;
-    right: 41.46%;
     top: 34.09%;
 
     font-family: 'Inria Sans';
@@ -132,22 +125,27 @@ color: #FFFFFF;
 
     color: #1a3244bd;
 }
-#calendar {
+#calendar{
     position: absolute;
-    width: 302px;
-    height: 75px;
-    left: 564px;
-    top: 324px;
+    width: 329px;
+    height: 63px;
+    left: 90px;
+    top: 396px;
 
     background: #FFFFFF;
     border-radius: 5px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
 }
 #guest{
     position: absolute;
-    width: 302px;
-    height: 75px;
-    left: 903px;
-    top: 324px;
+    width: 329px;
+    height: 63px;
+    left: 90px;
+    top: 495px;
     background: #FFFFFF;
     border-radius: 5px;
 }
@@ -156,9 +154,9 @@ color: #FFFFFF;
     left: 0%;
     right: 0%;
     top: 7.95%;
-    bottom: 6.82%;
+    bottom: 7.95%;
     
-    padding-left: 30%;
+    padding-left: 24.83%;
 
     background: #FFFFFF;
     border-radius: 5px;
@@ -173,7 +171,7 @@ color: #FFFFFF;
 }
 #people::placeholder{
     position: absolute;
-    left: 30%;
+    left: 24.83%;
     top: 34.09%;
     
 
@@ -185,25 +183,69 @@ color: #FFFFFF;
 
     color: #1a3244bd;
 }
-#pum{
+#search{
     position: absolute;
-    width: 417px;
-    height: 123px;
-    left: 432px;
-    top: 502px;
-    background: #4399FF;
-    border-radius: 10px;
-    position: absolute;
+    width: 302px;
+    height: 78px;
+    left: 98px;
+    top: 611px;
+    background: #FFEB85;
+    border-radius: 20px;
 
-
+    border: 0px;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 77px;
-    /* identical to box height */
-    border: 0px;
+    font-size: 36px;
+    line-height: 43px;
 
-    color: #FFFFFF;
+    color: #1A3244;
 }
-    
+#block{
+    position: absolute;
+    width: 716px;
+    height: 213px;
+    left: 511px;
+    top: 254px;
+    background: #FFEB85;
+    border-radius: 15px;
+}
+#roop{
+    position: absolute;
+    left: 2.79%;
+    right: 62.43%;
+    top: 8.04%;
+    bottom: 8.54%;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+#name{
+    position: absolute;
+    width: 421px;
+    height: 45px;
+    left : 281px;
+    top: 16px;
+    background: #FFFFFF;
+    border-radius: 17px;   
+}
+
+#lowname{
+    position: absolute;
+width: 421px;
+height: 123px;
+left: 281px;
+top: 72px;
+
+background: #FFFFFF;
+border-radius: 15px;
+}
+
+#lowerblock{
+    position: absolute;
+    width: 716px;
+    height: 212px;
+    left: 511px;
+    top: 521px;
+    background: #FFEB85;
+    border-radius: 15px;
+}

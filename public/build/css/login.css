@@ -149,4 +149,18 @@
 
     color: #FFFEFE;
     border: none;
-    }
+}
+.blue:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+.blue:active {
+    filter: grayscale(70%)brightness(150%);
+}
+.white:hover {
+    cursor: pointer;
+}
+
+.white:active {
+    filter: grayscale(50%)brightness(130%);
+}

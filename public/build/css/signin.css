@@ -44,25 +44,21 @@
     border-radius: 10px;
 }
 #huasigninjing{
-    position: absolute;
-    width: 364px;
-    height: 54px;
-    /*left: 461px;
-    top: 235px; */
-    border: none;
+    display: flex;
+    justify-content: center;
     
-
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 29px;
+    line-height: 10px;
     display: flex;
     align-items: center;
     text-align: center;
     
     color: #000000;
 }
+
 #saimail{
     position: absolute;
     width:323px;
@@ -103,22 +99,41 @@
     border-radius: 10px;
 }
 #saipassjing{
-    position: absolute;
-    width: 323px;
+    width: 299px;
     height: 56px;
-    padding-left: 100%;
-
     border: none;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-
+    
+    padding-left: 7.43%;
     color: #1A3244;
     background: #ffffff;
     border-radius: 10px;
 }
+
+
 #saipassjing::placeholder{
     color: #1a3244a0;
+}
+
+#login{
+    position: absolute;
+    width: 222px;
+    height: 64px;
+    left: 529px;
+    top: 663px;
+    background: #4399FF;
+    border-radius: 10px;
+
+    border: none;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #b {
     /* Travarokail */
     
@@ -18,12 +19,34 @@ color: #FFFFFF;
 
 }
 #c {
+=======
+#w{
+>>>>>>> dew
     position: absolute;
-width: 1280px;
-height: 359px;
-left: 0px;
-top: 0px;
+    left: 10%;
+    right: 10%;
+    top: 7.95%;
+    bottom: 10px;
+    padding-left: 19.6%;
+    padding-bottom: 15.91%;
+    font-family: url(https://fonts.gstatic.com/s/inriasans/v14/ptRMTiqXYfZMCOiVj9kQ1Of4KDNu.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 0px;
+}
+#w::placeholder{
+    position: absolute;
+    left: 24.83%;
+    top: 34.09%;
+    font-family: url(https://fonts.gstatic.com/s/inriasans/v14/ptRMTiqXYfZMCOiVj9kQ1Of4KDNu.woff2) format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
 
-background: #4399FF;
-
+    color: #1a3244bd;
 }

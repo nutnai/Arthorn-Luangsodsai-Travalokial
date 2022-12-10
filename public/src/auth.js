@@ -3,15 +3,15 @@
 // import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js';
 // import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
 
-// // web app's Firebase configuration
+// web app's Firebase configuration
 // const firebaseConfig = {
-//     apiKey: "AIzaSyA0xpA5BpyMiRuUkPJUYSiYFIDF_WPCX4Q",
-//     authDomain: "travalokail.firebaseapp.com",
-//     projectId: "travalokail",
-//     storageBucket: "travalokail.appspot.com",
-//     messagingSenderId: "562392420774",
-//     appId: "1:562392420774:web:5403a53630fe7c09f83f67",
-//     measurementId: "G-6YNTWFPT4F"
+//   apiKey: "AIzaSyDxO7oivFNLewkGDGYRNXoCuykawK00SHU",
+//   authDomain: "travalokail-55abf.firebaseapp.com",
+//   projectId: "travalokail-55abf",
+//   storageBucket: "travalokail-55abf.appspot.com",
+//   messagingSenderId: "798421668052",
+//   appId: "1:798421668052:web:0ad6b5ca6239d2a7d4ab41",
+//   measurementId: "G-GNG1NY8VK2"
 // };
 
 // // Initialize Firebase
@@ -55,7 +55,7 @@
 //         }
 //     }
 //     // userSignIn(username.value, password.value);
-    
+
 // }
 // //make function to global (use by other file)
 // window.usernameIsExits = usernameIsExits;
@@ -89,7 +89,7 @@
 //             const csrfToken = getCookie('csrfToken')
 //             return postIdTokenToSessionLogin('/sessionLogin', idToken, csrfToken);
 //           });
-        
+
 //     })
 //     .catch((error) => {
 //         const errorCode = error.code;
@@ -120,29 +120,61 @@
 //   });
 // }
 
-  
-import { GoogleAuthProvider, signInWithRedirect, getAuth, getRedirectResult} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
-const provider = new GoogleAuthProvider();
+import { GoogleAuthProvider, signInWithPopup, getAuth, signOut, setPersistence, inMemoryPersistence } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
-const auth = getAuth();
-signInWithRedirect(auth, provider);
+function signin() {
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      console.log("welcome back, " + user.displayName);
+      localStorage.setItem("username",user.displayName);
+    }).catch((error) => {
+    });
 
-getRedirectResult(auth)
-  .then((result) => {
-    // This gives you a Google Access Token. You can use it to access Google APIs.
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
+  // setPersistence(auth, inMemoryPersistence)
+  //   .then(() => {
+  //     return signInWithPopup(auth, provider).then((result) => {
+  //       const user = result.user;
+  //       console.log("welcome back, " + user.displayName);
+  //     });
+  //   })
+  //   .catch((error) => {
+  //     const errorCode = error.code;
+  //     const errorMessage = error.message;
+  //   });
+}
+window.signin = signin;
 
-    // The signed-in user info.
-    const user = result.user;
+function signout() {
+  const auth = getAuth();
+  const username = localStorage.getItem("username");
+  localStorage.removeItem("username");
+  signOut(auth).then(() => {
+    if (username != null) {
+      console.log("see you later, " + username);
+    } else {
+      console.log("please sign in");
+    }
   }).catch((error) => {
-    // Handle Errors here.
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // The email of the user's account used.
-    const email = error.customData.email;
-    // The AuthCredential type that was used.
-    const credential = GoogleAuthProvider.credentialFromError(error);
-    // ...
+    // An error happened.
   });
+}
+window.signout = signout;
+
+function getauth() {
+  const username = localStorage.getItem("username");
+  if (username == null) {
+    console.log("please sign in");
+  } else {
+    console.log("I am "+username);
+  }
+  
+}
+window.getauth = getauth;

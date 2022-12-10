@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/build/css/Profile.css">
+    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body style="background-color: white;">
+    <div id="kim1">
+        <div>
+            <p id="name">
+              Travalokail  
+            </p>
+
+        </div>
+         
+    </div>
+    <div id="mid">
+        
+        <div id="bluebox">
+            
+        </div>
+        <div id="yellowbox">
+
+        </div>
+        <div id="whitebox">
+
+        </div>
+        <input id="but1"type="button" value="save">
+        <div class="line1">
+            <div id="linee1">
+
+            </div>
+            <div id="linee2">
+
+            </div>
+            <div id="linee3">
+
+            </div>
+            <div id="linee4">
+
+            </div>
+
+        </div>
+        <input id="edit1"type="button" value="Edit">
+        <input id="edit2"type="button" value="Edit">
+        <input id="edit3"type="button" value="Edit">
+        <input id="edit4"type="button" value="Edit">
+        <input id="na"type="text" placeholder="name...">
+        <input id="email"type="text" placeholder="email...">
+        <input id="Phonnumber"type="text" placeholder="Phonnumber...">
+        <input id="Adrress"type="text" placeholder="address...">
+
+        <p id="personal">Personal details</p>
+        <input id="delete"type="button"value="Delete accout" onclick="myFunction()">
+        <input id="logout"type="button"value="Log Out">
+        <p class="reset">
+            Reset password ?
+        </p>
+        <p id="blankk"> </p>
+    
+   
+    
+    
+    
+    
+        
+    
+    
+    
+    
+    </div>
+    </div>
+    <div class="popup" id="all">
+        <span class="popuptext" id="myPopup">
+               
+        </span>
+        <span class = "asky"id="ask"> Do &nbsp;you&nbsp;sure&nbsp;&#x3F;</span>
+             
+            <input class= "noo"type="button" value="No" id="no" onclick="closeWin()">
+            <input class="yess"type="button" value="Yes" id="yes">
+            
+           
+        
+      </div>
+      
+    <script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+    
+  var popup = document.getElementById("myPopup");
+  var pop1 = document.getElementById("ask");
+  var pop2 =document.getElementById("no");
+  var pop3 = document.getElementById("yes");
+  
+  popup.classList.toggle("show");
+  pop1.classList.toggle("show");
+  pop2.classList.toggle("show");
+  pop3.classList.toggle("show");
+  
+ 
+ 
+}
+function closeWin(){
+    
+    document.getElementById("myPopup").style.display = "none";
+    document.getElementById("ask").style.display = "none";
+    document.getElementById("no").style.display = "none";
+    document.getElementById("yes").style.display = "none";
+}
+</script>
+    
+   
+       
+   
+
+    
+</body>
+</html>

@@ -39,6 +39,13 @@ async function usernameIsExits() {
                 String(element.data().hashPassword) == String(password.value)) {
                 location.href = "../web/account.html";
                 exits = true;
+                return user.getIdToken().then(idToken => {
+                    // Session login endpoint is queried and the session cookie is set.
+                    // CSRF protection should be taken into account.
+                    // ...
+                    const csrfToken = getCookie('csrfToken')
+                    return postIdTokenToSessionLogin('/sessionLogin', idToken, csrfToken);
+                });
                 return;
             }
         });

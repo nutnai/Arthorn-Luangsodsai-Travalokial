@@ -40,7 +40,6 @@
 
     color: #1A3244;
     border: 0px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background: #FFEB85;
     border-radius: 20px;
 }
@@ -76,7 +75,7 @@ color: #FFFFFF;
     color: #1A3244;
     border: 0px;
 
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
     background: #FFEB85;
     border-radius: 20px;
 }
@@ -205,5 +204,20 @@ color: #FFFFFF;
     border: 0px;
 
     color: #FFFFFF;
+}
+
+.blue:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+.blue:active {
+    filter: grayscale(70%)brightness(150%);
+}
+.yelloww:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+.yelloww:active {
+    filter: grayscale(50%)brightness(105%);
 }
     

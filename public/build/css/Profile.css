@@ -72,7 +72,7 @@ border-radius: 15px;
         position: absolute;
         width: 107px;
         height: 45px;
-        left: 977px;
+        left: 1011px;
         top: 819px;
         padding: 0;
     border: none;
@@ -314,7 +314,7 @@ height: 49px;
         color: #D9D9D9;}
     #na{
         position: absolute;
-width: 126px;
+width: 580px;
 height: 38px;
 left: 418px;
 top: 357px;
@@ -323,6 +323,7 @@ font-style: normal;
 font-weight: 300;
 font-size: 24px;
 line-height: 29px;
+border: none;
 
 color: #828282;
 
@@ -330,10 +331,11 @@ color: #828282;
 #email{
 
     position: absolute;
-width: 126px;
+width: 580px;
 height: 38px;
 left: 422px;
 top: 472px;
+border: none;
 
 font-family: 'Inria Sans';
 font-style: normal;
@@ -346,10 +348,11 @@ color: #828282
 }
 #Phonnumber{
     position: absolute;
-width: 207px;
+width: 580px;
 height: 38px;
 left: 422px;
 top: 595px;
+border: none;
 
 font-family: 'Inria Sans';
 font-style: normal;
@@ -361,11 +364,11 @@ color: #828282;
 
 }
 #Adrress{position: absolute;
-    width: 207px;
+    width: 580px;
     height: 38px;
     left: 422px;
     top: 725px;
-    
+    border: none;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 300;
@@ -581,5 +584,14 @@ color: #000000;
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+  input[type="button"]:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
 
+input[type="button"]:active {
+    filter: grayscale(70%)brightness(150%);
+    
+
+}
 

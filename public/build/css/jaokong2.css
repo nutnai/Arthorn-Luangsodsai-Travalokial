@@ -165,15 +165,15 @@ line-height: 45px;
 }
 #save{
     position: absolute;
-width: 187px;
+width: 140px;
 height: 60px;
-left: 1032px;
+left: 1100px;
 top: 1070px;
-
+border: none;
 font-family: 'Inria Sans';
 font-style: normal;
 font-weight: 700;
-font-size: 48px;
+font-size: 30px;
 line-height: 58px;
 text-align: center;
 
@@ -187,17 +187,26 @@ border-radius: 10px;
     background: #4399FF;
     border-radius: 10px;
     position: absolute;
-    width: 187px;
+    width: 140px;
     height: 60px;
-    left: 724px;
+    left: 880px;
     top: 1070px;
-    
+    border: none;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 30px;
     line-height: 58px;
     text-align: center;
     color: #FFFFFF;
 
+}
+
+input[type="button"]:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+
+input[type="button"]:active {
+    filter: grayscale(70%)brightness(150%);
 }

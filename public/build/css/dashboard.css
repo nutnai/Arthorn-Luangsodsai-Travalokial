@@ -1,0 +1,57 @@
+#sifah{
+    /* Rectangle 1 */
+    position: relative;
+    width: 1280px;
+    height: 148px;
+    left: 0px;
+    top: 0px;
+
+    background: #4399FF;
+}
+#hua{
+    position: absolute;
+    width: 261.02px;
+    height: 60px;
+    left: 22px;
+    top: 24px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+#right{
+    position: absolute;
+width: 423px;
+height: 51px;
+left: 836px;
+top: 33px;
+
+font-family: 'Inria Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+color: #FFFFFF;
+
+}
+
+#db{
+    position: absolute;
+width: 423px;
+height: 51px;
+left: 600px;
+top: 400px;
+
+
+    font-family: 'Inria Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 38px;
+
+}

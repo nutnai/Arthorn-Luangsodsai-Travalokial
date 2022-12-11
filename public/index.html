@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/public/css/index.css">
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
     <script src="/public/src/index.js"></script>
+    <script type="module" src="/public/src/isLoginTopRight.js"></script>
     <title>homapage</title>
 </head>
 
@@ -17,10 +18,13 @@
     <div id="sifah">
         <p id="hua">Travarokail</p>
         <p id="search">Find your next stay...</p>
-        <input type="button" value="Register" id="regis" class="yelloww"
-            onclick="window.location.href='/public/web/register.html'">
-        <input type="button" value="Sign in" id="signin" class="yelloww"
-            onclick="window.location.href='/public/web/signin.html'">
+        <div id="sorn">
+            <input type="button" value="Register" id="regis" class="yelloww"
+                onclick="window.location.href='/public/web/register.html'">
+            <input type="button" value="Sign in" id="signin" class="yelloww"
+                onclick="window.location.href='/public/web/signin.html'">
+        </div>
+
 
     </div>
     <div id="yellow">

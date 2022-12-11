@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,32 +11,40 @@
     <script type="module" src="/public/src/firestoreAPI.js"></script>
     <title>search</title>
 </head>
-<body>
+
+<body style="background-color: black;">
     <div id="sifah">
-        <p id="hua" onclick="window.location.href='/public/index.html'"onclick="window.location.href='/public/index.html'">Travarokail</p>
-        <input type="button" value="Register" id="regis" class="yellow" onclick="window.location.href='/public/web/register.html'">
-        <input type="button" value="Sign in" id="signin" class="yellow" onclick="window.location.href='/public/web/signin.html'">
+        <p id="hua" onclick="window.location.href='/public/index.html'"
+            onclick="window.location.href='/public/index.html'">Travarokail</p>
+        <input type="button" value="Register" id="regis" class="yellow"
+            onclick="window.location.href='/public/web/register.html'">
+        <input type="button" value="Sign in" id="signin" class="yellow"
+            onclick="window.location.href='/public/web/signin.html'">
     </div>
     <div id="sifah2">
 
     </div>
     <div id="where">
-        <input type="text" placeholder="where are you going ?" id="w" >
+        <input type="text" placeholder="where are you going ?" id="w">
     </div>
     <div id="calendar">
-        
+
     </div>
     <div id="guest">
-        <input type="text" placeholder="guest" id="people" >
+        <input type="text" placeholder="guest" id="people">
     </div>
     <input type="button" value="search" id="search" class="yellow" onclick="clickSearch()">
-    <div id="block" onclick="window.location.href='detail.html'">
-        <div id="roop">
+    <div id="addBlock">
+        <div id="block" onclick="window.location.href='detail.html'">
+            <div id="roop">
+            </div>
+            <p id="name">Hotel name</p>
+            <p id="lowname">Hotel Details</p>
+
         </div>
-        <p id="name">Hotel name</p>
-        <p id="lowname">Hotel Details</p>
-        
     </div>
-  
+
+
 </body>
+
 </html>

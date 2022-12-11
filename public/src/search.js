@@ -27,8 +27,14 @@ function getDBHotel () {
 
 
 }
-getDBHotel();
+// getDBHotel();
 
-
-
+var block = document.getElementById("name");
+var addBlock = document.getElementById("addBlock");
+for (let i=1;i<5;i++) {
+    var newBlock = block.cloneNode();
+    newBlock.style.top = (i*254+2).toString()+"px"
+    addBlock.appendChild(newBlock)
+    
+}
 

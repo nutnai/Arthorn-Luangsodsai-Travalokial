@@ -130,10 +130,6 @@ function signin() {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
     .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      // The signed-in user info.
       const user = result.user;
       console.log("welcome back, " + user.displayName);
       localStorage.setItem("isAuth", "yes");
@@ -176,15 +172,26 @@ function signout() {
 }
 window.signout = signout;
 
-function getauth() {
+export function getauth() {
   console.log(getAuth());
   if (!localStorage.getItem("isAuth")) {
     console.log("please sign in");
+    return false;
   } else {
     tryToGetAuth().then((auth) => {
       console.log("I am " + auth.currentUser.displayName);
+      return true;
     });
   }
 
 }
 window.getauth = getauth;
+
+var dict = {name:'nutnai', age:19};
+console.log(dict);
+var str = JSON.stringify(dict);
+window.localStorage.setItem("dict",str)
+console.log(str);
+var newDic = JSON.parse(window.localStorage.getItem("dict"))
+console.log(newDic);
+console.log(newDic["name"]);

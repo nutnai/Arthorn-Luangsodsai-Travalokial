@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
 import { getFirestore, query, collection, getDocs, doc, setDoc, addDoc, where} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
-import { getFirestore, query, collection, getDocs, doc, setDoc, addDoc, where} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
 
 // web app's Firebase configuration
 const firebaseConfig = {
@@ -22,12 +21,13 @@ const db = getFirestore(app);
 
 //เลือกโรงแรมตอนผู้ใช้ค้นหา                                  !
 export async function get_hotel_list(address, time, number_of_customer) {
-    const q = query(collection(db,"hotel_list"), where('address', 'array-contains', address));
+    // const q = query(collection(db,"hotel_list"), where('address', 'array-contains', address));
+    const q = query(collection(db,"hotel_list"), where('address', 'array-contains', "หัวลำโพง"));
     const querySnapshot = await getDocs(q);
     var ret = []
     querySnapshot.forEach((doc) => {
         ret.push(doc.data());
-        // console.log(doc.id, " => ", doc.data());
+        console.log(doc.id, " => ", doc.data());
     });
     return ret;
 }
@@ -53,10 +53,10 @@ async function add_hotel_list(name, address, number_of_customer, price) {
     });
 }
 function thotel () {
-    var name = "nut";
+    var name = "ป๋อม";
     var address = ["หัวลำโพง","กรุงเทพ"];
-    var number_of_customer = [2,3,4];
-    var price = [200,300,400];
+    var number_of_customer = [10,15,20];
+    var price = [2,3,4];
     add_hotel_list(name, address, number_of_customer, createMapPrice(number_of_customer,price));
 }
 window.thotel = thotel;

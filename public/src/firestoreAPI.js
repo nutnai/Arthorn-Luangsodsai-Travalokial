@@ -17,11 +17,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-//! Config //////////////////////////////////////////////////////////
+//! Config //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////get
 
 //เลือกโรงแรมตอนผู้ใช้ค้นหา                                  !
-async function get_hotel_list() {
-    const q = query(collection(db,"hotel_list"));
+async function get_hotel_list(address, time, number_of_customer) {
+    const q = query(collection(db,"hotel_list"), where('adress', 'in', address), where('number_of_customer', 'in', number_of_customer));
+    // const q = query(collection(db,"hotel_list"))
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
@@ -29,6 +30,8 @@ async function get_hotel_list() {
 }
 // get_hotel_list();
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////add
 function createMapPrice (number_of_customer, price){
     var ret = new Object();
     for (var i=0; i<number_of_customer.length; i++) {
@@ -36,7 +39,7 @@ function createMapPrice (number_of_customer, price){
     }
     return ret;
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////add
+////////////////////////////////////////config
 //hotel
 async function add_hotel_list(name, address, number_of_customer, price) {
     await addDoc(collection(db, "hotel_list"), {

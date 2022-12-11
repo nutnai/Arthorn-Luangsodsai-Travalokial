@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nutnai/Arthorn-Luangsodsai-Travalokial#readme",
   "dependencies": {
-    "firebase": "^9.15.0"
+    "firebase": "^9.15.0",
+    "utf8": "^3.0.0"
   }
 }

@@ -246,7 +246,7 @@
     top: 0%;
     bottom: 0%;
 
-    background: #BFDDFF;
+    background: #4399FF;
     border-radius: 10px;
     position: absolute;
     width: 161px;
@@ -283,7 +283,7 @@
     background: none;
     cursor: pointer;
 
-    background: #BFDDFF;
+    background: #4399FF;
     border-radius: 10px;
     width: 161px;
     height: 49px;
@@ -305,7 +305,7 @@
     width: 209px;
     height: 29px;
     left: 1003px;
-    top: 1074px;
+    top: 1065px;
 
 
     font-family: 'Inria Sans';
@@ -315,7 +315,7 @@
     line-height: 24px;
     cursor: pointer;
 
-    color: #D9D9D9;}
+    color: #828282;}
 #na{
     position: absolute;
     width: 580px;

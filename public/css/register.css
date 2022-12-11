@@ -14,6 +14,7 @@
     height: 60px;
     left: 22px;
     top: 24px;
+    cursor: pointer;
 
     font-family: 'Inria Sans';
     font-style: normal;
@@ -29,6 +30,7 @@
     height: 73px;
     left: 1142px;
     top: 37px;
+    cursor: pointer;
 
     border-radius: 217px;
     background: #c0c8f7;

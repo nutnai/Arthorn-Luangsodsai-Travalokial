@@ -1,6 +1,6 @@
 #sifah{
     /* Rectangle 1 */
-    position: relative;
+    position: absolute;
     width: 1280px;
     height: 148px;
     left: 0px;
@@ -9,6 +9,7 @@
     background: #4399FF;
 }
 #hua{
+    cursor: pointer;
     position: absolute;
     width: 261.02px;
     height: 60px;

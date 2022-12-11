@@ -1,6 +1,6 @@
 #sifah{
     /* Rectangle 1 */
-    position: relative;
+    position: absolute;
     width: 1280px;
     height: 148px;
     left: 0px;
@@ -14,6 +14,7 @@
     height: 60px;
     left: 22px;
     top: 24px;
+    cursor: pointer;
 
     font-family: 'Inria Sans';
     font-style: normal;
@@ -65,7 +66,7 @@
 #sifah2{
     position: absolute;
     width: 389px;
-    height: 479px;
+    height: 460px;
     left: 60px;
     top: 254px;
 
@@ -82,7 +83,7 @@
     border: 0px;
 
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
 
     font-family: 'Inria Sans';
     font-style: normal;
@@ -95,30 +96,31 @@
     position: absolute;
     left: 0%;
     right: 0%;
-    top: 7.95%;
-    bottom: 6.82%;
-    padding-left: 24.83%;
+    top: 0%;
+    bottom: 0%;
+    padding-left: 23%;
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
     border: 0px;
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
 
-    color: #1a3244;
+    color: #1a3448;
 }
 #w::placeholder{
     position: absolute;
-    left: 24.83%;
+    left: 23%;
     top: 34.09%;
+    border-radius: 7px;
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
 
     color: #1a3244bd;
@@ -131,7 +133,7 @@
     top: 396px;
 
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
@@ -145,56 +147,56 @@
     left: 90px;
     top: 495px;
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 #people{
     position: absolute;
     left: 0%;
     right: 0%;
-    top: 7.95%;
-    bottom: 7.95%;
+    top: 0%;
+    bottom: 0%;
     
-    padding-left: 24.83%;
+    padding-left: 23%;
 
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
     border: 0px;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
 
-    color: #1a3244;
+    color: #1a3448;
 }
 #people::placeholder{
     position: absolute;
-    left: 24.83%;
-    top: 34.09%;
+    left: 23%;
+    top: 30%;
     
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
 
     color: #1a3244bd;
 }
 #search{
     position: absolute;
-    width: 302px;
-    height: 78px;
-    left: 98px;
-    top: 611px;
+    width: 125px;
+    height: 60px;
+    left: 190px;
+    top: 610px;
     background: #FFEB85;
-    border-radius: 20px;
+    border-radius: 25px;
 
     border: 0px;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 25px;
     line-height: 43px;
 
     color: #1A3244;
@@ -207,6 +209,7 @@
     top: 254px;
     background: #FFEB85;
     border-radius: 15px;
+    cursor: pointer;
 }
 #roop{
     position: absolute;

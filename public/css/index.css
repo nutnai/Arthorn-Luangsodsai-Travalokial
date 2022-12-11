@@ -8,6 +8,21 @@
 
     background: #4399FF;
 }
+#hua{
+    position: absolute;
+    width: 261.02px;
+    height: 60px;
+    left: 22px;
+    top: 24px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
 #search{
     /* Find your next stay... */
     position: absolute;
@@ -15,11 +30,12 @@
     height: 96px;
     left: 58px;
     top: 179px;
+    cursor: context-menu;
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 48px;
 
     color: #FFFFFF;
@@ -43,21 +59,7 @@
     background: #FFEB85;
     border-radius: 20px;
 }
-#hua{
-    position: absolute;
-    width: 261.02px;
-    height: 60px;
-    left: 22px;
-    top: 24px;
 
-    font-family: 'Inria Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-
-color: #FFFFFF;
-}
 #signin{
     /* Component 3 */
     position: absolute;
@@ -106,13 +108,13 @@ color: #FFFFFF;
     bottom: 6.82%;
     padding-left: 24.83%;
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
     border: 0px;
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
 
     color: #1a3244;
@@ -120,13 +122,13 @@ color: #FFFFFF;
 #w::placeholder{
     position: absolute;
     left: 24.83%;
-    right: 41.46%;
+    right: 4%;
     top: 34.09%;
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
 
     color: #1a3244bd;
@@ -139,7 +141,7 @@ color: #FFFFFF;
     top: 324px;
 
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 #guest{
     position: absolute;
@@ -148,7 +150,7 @@ color: #FFFFFF;
     left: 903px;
     top: 324px;
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 #people{
     position: absolute;
@@ -160,12 +162,12 @@ color: #FFFFFF;
     padding-left: 30%;
 
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
     border: 0px;
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
 
     color: #1a3244;
@@ -173,32 +175,32 @@ color: #FFFFFF;
 #people::placeholder{
     position: absolute;
     left: 30%;
-    top: 34.09%;
+    top: 33.00%;
     
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 19px;
 
     color: #1a3244bd;
 }
 #pum{
     position: absolute;
-    width: 417px;
-    height: 123px;
-    left: 432px;
+    width: 200px;
+    height: 90px;
+    left: 545px;
     top: 502px;
     background: #4399FF;
-    border-radius: 10px;
+    border-radius: 35px;
     position: absolute;
 
 
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 45px;
     line-height: 77px;
     /* identical to box height */
     border: 0px;

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
-import { getFirestore, query, collection, getDocs, doc, setDoc, addDoc } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
+import { getFirestore, query, collection, getDocs, doc, setDoc, addDoc, where} from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
 
 // web app's Firebase configuration
 const firebaseConfig = {
@@ -20,13 +20,16 @@ const db = getFirestore(app);
 //! Config //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////get
 
 //เลือกโรงแรมตอนผู้ใช้ค้นหา                                  !
-async function get_hotel_list(address, time, number_of_customer) {
-    const q = query(collection(db,"hotel_list"), where('adress', 'in', address), where('number_of_customer', 'in', number_of_customer));
-    // const q = query(collection(db,"hotel_list"))
+export async function get_hotel_list(address, time, number_of_customer) {
+    // const q = query(collection(db,"hotel_list"), where('adress', 'in', address), where('number_of_customer', 'in', number_of_customer));
+    const q = query(collection(db,"hotel_list"),where('name', '==', 'nut'));
     const querySnapshot = await getDocs(q);
+    var ret = []
     querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+        ret.push(doc.data());
+        // console.log(doc.id, " => ", doc.data());
     });
+    return ret;
 }
 // get_hotel_list();
 

@@ -235,7 +235,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 29px;
+    line-height: 44px;
 }
 
 #lowname{
@@ -280,4 +280,58 @@
 
 .yellow:active {
     filter: grayscale(50%)brightness(105%);
+}
+
+#tumnang{
+    position: absolute;
+    width: 400px;
+    height: 123px;
+    left: 830px;
+    top: 346px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 29px;
+    
+}
+
+#raka{
+    position: absolute;
+    width: 400px;
+    height: 123px;
+    left: 1059px;
+    top: 45px;
+    border: none;
+    background: none;
+    opacity: 0.2;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: right;
+}
+#konPak{
+    position: absolute;
+    width: 400px;
+    height: 123px;
+    left: 830px;
+    top: 409px;
+    border: none;
+    border: none;
+    background: none;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 29px;
 }

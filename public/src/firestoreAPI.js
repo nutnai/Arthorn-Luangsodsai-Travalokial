@@ -23,10 +23,14 @@ const db = getFirestore(app);
 export async function get_hotel_list(address, time, number_of_customer) {
     const q = query(collection(db,"hotel_list"), where('address', '==', address), where('number_of_customer', '==', number_of_customer));
     // const q = query(collection(db,"hotel_list"),where('name','==','nut'))
+
     const querySnapshot = await getDocs(q);
+    var ret = []
     querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+        ret.push(doc.data());
+        // console.log(doc.id, " => ", doc.data());
     });
+    return ret;
 }
 // get_hotel_list();
 

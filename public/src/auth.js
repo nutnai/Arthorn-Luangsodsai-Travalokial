@@ -1,28 +1,31 @@
+import { GoogleAuthProvider, signInWithPopup, getAuth, signOut, setPersistence, inMemoryPersistence, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+
 // // Import the functions you need from the SDKs you need
-// import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
-// import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js';
-// import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
+import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
 
 // web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDxO7oivFNLewkGDGYRNXoCuykawK00SHU",
-//   authDomain: "travalokail-55abf.firebaseapp.com",
-//   projectId: "travalokail-55abf",
-//   storageBucket: "travalokail-55abf.appspot.com",
-//   messagingSenderId: "798421668052",
-//   appId: "1:798421668052:web:0ad6b5ca6239d2a7d4ab41",
-//   measurementId: "G-GNG1NY8VK2"
-// };
+const firebaseConfig = {
+  apiKey: "AIzaSyDxO7oivFNLewkGDGYRNXoCuykawK00SHU",
+  authDomain: "travalokail-55abf.firebaseapp.com",
+  projectId: "travalokail-55abf",
+  storageBucket: "travalokail-55abf.appspot.com",
+  messagingSenderId: "798421668052",
+  appId: "1:798421668052:web:0ad6b5ca6239d2a7d4ab41",
+  measurementId: "G-GNG1NY8VK2"
+};
 
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// export const auth = getAuth(app);
-// const db = getFirestore(app);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+const db = getFirestore(app);
 
 
-// //! Config ////////////////////////////////////////////////////////////
-// const user = auth.currentUser;
-// if (user) {
+//! Config ////////////////////////////////////////////////////////////
+// async function usera(){
+//   return await auth.currentUser
+// }
+// if (usera()) {
 //     console.log("welcome back!");
 // } else {
 //     console.log("please sign in");
@@ -121,7 +124,6 @@
 // }
 
 
-import { GoogleAuthProvider, signInWithPopup, getAuth, signOut, setPersistence, inMemoryPersistence } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 function signin() {
   const auth = getAuth();
@@ -134,7 +136,8 @@ function signin() {
       // The signed-in user info.
       const user = result.user;
       console.log("welcome back, " + user.displayName);
-      localStorage.setItem("username",user.displayName);
+      localStorage.setItem("isAuth", "yes");
+      console.log(auth);
     }).catch((error) => {
     });
 
@@ -152,29 +155,36 @@ function signin() {
 }
 window.signin = signin;
 
+async function tryToGetAuth() {
+  var auth = await getAuth();
+  return auth;
+}
+
 function signout() {
-  const auth = getAuth();
-  const username = localStorage.getItem("username");
-  localStorage.removeItem("username");
-  signOut(auth).then(() => {
-    if (username != null) {
-      console.log("see you later, " + username);
-    } else {
-      console.log("please sign in");
-    }
-  }).catch((error) => {
-    // An error happened.
-  });
+  if (!localStorage.getItem("isAuth")) {
+    console.log("please sign in");
+  } else {
+    tryToGetAuth().then((auth) => {
+      signOut(auth).then(() => {
+        console.log("see you later");
+        localStorage.removeItem("isAuth");
+      }).catch((error) => {
+
+      });
+    });
+  }
 }
 window.signout = signout;
 
 function getauth() {
-  const username = localStorage.getItem("username");
-  if (username == null) {
+  console.log(getAuth());
+  if (!localStorage.getItem("isAuth")) {
     console.log("please sign in");
   } else {
-    console.log("I am "+username);
+    tryToGetAuth().then((auth) => {
+      console.log("I am " + auth.currentUser.displayName);
+    });
   }
-  
+
 }
 window.getauth = getauth;

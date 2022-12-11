@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
-        <link rel="stylesheet" href="../css/login.css">
-    </head>
-    <body>
-        <script type="module" src="../src/auth.js"></script>
-        <div id="rectangle_1"></div>
-        <input type="button" value="back" onclick="location.href = '../index.html';">
-        <p id="__p__travarokail">Travalokail</p>
-        <br><br><br>
-        <form method="post" action="account.html" class="typeAccount">
-            <input type="text" id="username" placeholder="username..." onfocus="document.getElementById('isExitsText').hidden=true;">
-            <input type="password" id="password" placeholder="password..." onfocus="document.getElementById('isExitsText').hidden=true;">
-            <input type="button" value="Login" id="account" onclick="usernameIsExits();">
-        </form>
-        <div hidden="true" id="isExitsText" style="margin-left: 10px; color: red;">wrong username or password</div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+    <title>Log in</title>
+</head>
+<body>
+    <div id="sifah">
+        <p id="hua" onclick="window.location.href='/public/index.html'">Travarokail</p>
+    </div>
+    <div id="saimail">
+        <input type="text" placeholder="Email or phone number" id="saijing">
+    </div>
+    <div id="saipass">
+        <input type="text" placeholder="Password" id="saipassjing">
+    </div>
+    <div>
+        <input type="button" value="forget password ?" id="forgetpass" class="white">
+    </div>
+    <div id="login">
+        <input type="button" value="log in" id="loginjing" class="blue" onclick="window.location.href='/public/index.html'">
+    </div>
+    <div id="register">
+        <input type="button" value="register" id="regisjing" class="blue" onclick="window.location.href='register.html'">
+    </div>
+</body>
 </html>

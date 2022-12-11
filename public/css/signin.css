@@ -1,6 +1,6 @@
 #sifah{
     /* Rectangle 1 */
-    position: relative;
+    position: absolute;
     width: 1280px;
     height: 148px;
     left: 0px;
@@ -46,6 +46,7 @@
 #huasigninjing{
     display: flex;
     justify-content: center;
+    cursor: context-menu;
     
     font-family: 'Inria Sans';
     font-style: normal;
@@ -121,12 +122,12 @@
 
 #login{
     position: absolute;
-    width: 222px;
-    height: 64px;
-    left: 529px;
+    width: 120px;
+    height: 52px;
+    left: 583px;
     top: 663px;
     background: #4399FF;
-    border-radius: 10px;
+    border-radius: 15px;
 
     border: none;
     font-family: 'Inria Sans';
@@ -144,6 +145,4 @@ input[type="button"]:hover {
 
 input[type="button"]:active {
     filter: grayscale(70%)brightness(150%);
-    
-
 }

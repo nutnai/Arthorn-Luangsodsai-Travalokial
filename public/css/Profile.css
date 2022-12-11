@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#sifah{
+    /* Rectangle 1 */
+    position: absolute;
+    width: 1280px;
+    height: 148px;
+    left: 0px;
+    top: 0px;
+
+    background: #4399FF;
+}
+#hua{
+    position: absolute;
+    width: 261.02px;
+    height: 60px;
+    left: 22px;
+    top: 64px;
+    cursor: pointer;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+#mid{
+    border-radius: 50%;
+    position: absolute;
+    width: 277px;
+    height: 265px;
+    left: 22px;
+    top: 170px;
+
+    background: #BFDDFF;
+
+}
+#yellowbox{
+    position: absolute;
+    width: 845px;
+    height: 680px;
+    left: 356px;
+    top: 248px;
+
+
+    background: #FFEB85;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+#bluebox{
+    position: absolute;
+    width: 301px;
+    height: 82px;
+    left: 356px;
+    top: 185px;
+
+    background: #4399FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;}
+#whitebox{
+    position: absolute;
+    width: 801px;
+    height: 637px;
+    left: 377px;
+    top: 272px;
+
+    background: #FFFFFF;
+    border-radius: 10px;}
+#but1{
+    position: absolute;
+    width: 107px;
+    height: 45px;
+    left: 1011px;
+    top: 819px;
+    padding: 0;
+    border: none;
+    background: none;
+    background: #4399FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+}
+#linee1{
+    position: absolute;
+    width: 749px;
+    height: 0px;
+    left: 396px;
+    top: 770px;
+
+    border: 2px solid #D9D9D9;
+    transform: rotate(-0.15deg);
+}
+#linee2{
+    position: absolute;
+    width: 749px;
+    height: 0px;
+    left: 396px;
+    top: 640px;
+
+    border: 2px solid #D9D9D9;
+    transform: rotate(-0.15deg);}
+#linee3{
+    position: absolute;
+    width: 749px;
+    height: 0px;
+    left: 396px;
+    top: 517px;
+
+    border: 2px solid #D9D9D9;
+    transform: rotate(-0.15deg);
+}
+#linee4{
+    position: absolute;
+    width: 749px;
+    height: 0px;
+    left: 398px;
+    top: 402px;
+
+    border: 2px solid #D9D9D9;
+    transform: rotate(-0.15deg);
+}
+#edit1{
+    position: absolute;
+    width: 81px;
+    height: 41px;
+    left: 1035px;
+    top: 351px;
+    padding: 0;
+    border: none;
+    background: none;
+    background: #E7F2FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+}
+#edit2{
+    position: absolute;
+    width: 81px;
+    height: 41px;
+    left: 1035px;
+    top: 465px;
+
+    padding: 0;
+    border: none;
+    background: none;
+    background: #E7F2FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+}
+#edit3{
+    position: absolute;
+    position: absolute;
+    width: 81px;
+    height: 41px;
+    left: 1035px;
+    top: 590px;
+
+    padding: 0;
+    border: none;
+    background: none;
+    background: #E7F2FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+}
+#edit4{
+    position: absolute;
+    position: absolute;
+    width: 81px;
+    height: 41px;
+    left: 1035px;
+    top: 719px;
+    padding: 0;
+    border: none;
+    background: none;
+    background: #E7F2FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+}
+#personal{
+    position: absolute;
+    width: 381px;
+    height: 55px;
+    left: 390px;
+    top: 208px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;}
+#delete{
+
+    position: absolute;
+    width: 161px;
+    height: 49px;
+    left: 827px;
+    top: 1052px;
+
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #BFDDFF;
+    border-radius: 10px;
+    position: absolute;
+    width: 161px;
+    height: 49px;
+
+    left: 838px;
+    top: 980px;
+
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+
+}
+#logout{
+    position: absolute;
+    width: 161px;
+    height: 49px;
+    left: 997px;
+    top: 1052px;
+
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    background: #BFDDFF;
+    border-radius: 10px;
+    width: 161px;
+    height: 49px;
+    left: 1041px;
+    top: 980px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFEFE;
+
+}
+.reset{
+    position: absolute;
+
+    width: 209px;
+    height: 29px;
+    left: 1003px;
+    top: 1074px;
+
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+
+    color: #D9D9D9;}
+#na{
+    position: absolute;
+    width: 580px;
+    height: 38px;
+    left: 418px;
+    top: 357px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    border: none;
+
+    color: #828282;
+
+}
+#email{
+
+    position: absolute;
+    width: 580px;
+    height: 38px;
+    left: 422px;
+    top: 472px;
+    border: none;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #828282
+
+}
+#Phonnumber{
+    position: absolute;
+    width: 580px;
+    height: 38px;
+    left: 422px;
+    top: 595px;
+    border: none;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #828282;
+
+}
+#Adrress{
+    position: absolute;
+    width: 580px;
+    height: 38px;
+    left: 422px;
+    top: 725px;
+    border: none;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+
+    color:#828282 ;
+}
+
+#blankk{
+    position: absolute;
+    width: 161px;
+    height: 49px;
+    left: 997px;
+    top: 1100px;
+}
+
+#whiteblock{
+    position: absolute;
+    width: 799px;
+    height: 423px;
+    left: 371px;
+    top: 431px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    visibility: hidden;
+}
+.popup.asky{
+    position: absolute;
+    width: 453px;
+    height: 162px;
+    left: 705px;
+    top: 573px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    visibility: hidden;
+
+
+    color: #000000;
+}
+.popup.asky::after{
+    position: absolute;
+    width: 453px;
+    height: 162px;
+    left: 705px;
+    top: 573px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    visibility: visible;
+
+}
+.popup .noo{
+
+    position: absolute;
+    width: 168px;
+    height: 59px;
+    left: 548px;
+    top: 720px;
+    background: #4399FF;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    visibility: hidden;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+.popup .noo::after{
+
+    position: absolute;
+    width: 168px;
+    height: 59px;
+    left: 548px;
+    top: 704px;
+    background: #4399FF;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    visibility: visible;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+.popup .yess{
+    position: absolute;
+    width: 168px;
+    height: 59px;
+    left: 808px;
+    top: 720px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    visibility: hidden;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+
+/* Popup container */
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+
+    position: absolute;
+    width: 799px;
+    height: 423px;
+    left: 371px;
+    top: 560px;
+
+    background: #f5f4f4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    visibility: hidden
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    position: absolute;
+    width: 799px;
+    height: 423px;
+    left: 705px;
+    top: 560px;
+    background: #b6b6b6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    visibility: visible;
+}
+.popup .asky {
+    visibility: hidden;
+    content: "";
+    position: absolute;
+    width: 453px;
+    height: 162px;
+    left: 705px;
+    top: 610px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #000000;
+}
+
+/* Popup arrow */
+.popup .asky::after {
+    content: "";
+    position: absolute;
+    width: 453px;
+    height: 162px;
+    left: 705px;
+    top: 610px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #000000;
+
+    border-color: #555 transparent transparent transparent;
+}
+
+
+
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+input[type="button"]:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+
+input[type="button"]:active {
+    filter: grayscale(70%)brightness(150%);
+}
+

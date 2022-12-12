@@ -36,12 +36,17 @@ export async function get_hotel_list(address, time, number_of_customer) {
 
 //ดูข้อมูลคอมเมนต์ตอนแสดงรายละเอียดโรงแรม
 export async function get_review (id_review) {
-    const q = query(collection(db, "review_list"));
     const querySnapshot = await getDoc(doc(db, "review_list", id_review));
-    return querySnapshot.data()
+    return querySnapshot.data();
 }
 // get_review("Z15fDv3tWZevZhSrUG0p").then((result)=>{console.log(result);})
 
+//ดูข้อมูลผู้ใช้จากไอดี
+export async function get_user (id_user) {
+    const userSnapshot = await getDoc(doc(db, "user_list", id_user));
+    return userSnapshot.data();
+}
+// get_user("zqF2ASPu6tISEcg7dkyC").then((result)=>{console.log(result);})
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////add
 function createMapPrice (number_of_customer, price){
     var ret = new Object();
@@ -125,18 +130,29 @@ async function treview () {
 }
 window.treview = treview;
 //user
-async function add_user(type, name, id_img) {
-    await addDoc(collection(db, "user"), {
-        type : type,
-        name : name,
-        id_img : id_img,
-    });
+export async function add_user(id_user, type, name, image) {
+    
+    if (id_user != null) {
+        await setDoc(doc(db, "user_list", id_user), {
+            type : type,
+            name : name,
+            image : image,
+        });
+        console.log("create new user!");
+    } else {
+        await addDoc(collection(db, "user_list"), {
+            type : type,
+            name : name,
+            image : image,
+        });
+    }
 }
 function tuser () {
+    var id_user = "test1"
     var type = 1;
-    var name = "ดิวคับ";
-    var id_img = "pf_deww.jpg";
-    add_user(type, name, id_img);
+    var name = "ใครไม่รู้";
+    var image = "pf_deww.jpg";
+    add_user(id_user, type, name, image);
 }
 window.tuser = tuser;
 

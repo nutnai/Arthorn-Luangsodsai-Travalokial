@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/signin.css">
+    <script type="module" src="/public/src/signin.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
     <title>Sign in</title>
 </head>
@@ -35,7 +36,7 @@
         <input type="text" placeholder="Password" id="saipassjing">
     </div>
     <input type="button" value="sign in" id="login" onclick="window.location.href='/public/index.html'">
-    <input type="button" value="Sign in with Google" id="signingoogle">
+    <input type="button" value="Sign in with Google" id="signingoogle" onclick="signIn()">
 
 </body>
 </html>

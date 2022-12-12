@@ -1,8 +1,9 @@
-import { GoogleAuthProvider, signInWithPopup, getAuth, signOut, setPersistence, inMemoryPersistence, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-
 // // Import the functions you need from the SDKs you need
+
+import { GoogleAuthProvider, signInWithPopup, getAuth, signOut, setPersistence, inMemoryPersistence, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
 import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
+import { get_user, add_user } from "./firestoreAPI.js";
 
 // web app's Firebase configuration
 const firebaseConfig = {
@@ -125,33 +126,25 @@ const db = getFirestore(app);
 
 
 
-function signin() {
+export function signin() {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
     .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-      console.log("welcome back, " + user.displayName);
-      localStorage.setItem("isAuth", "yes");
-      console.log(auth);
+      get_user(result.user.uid).then((user) => {
+        if (user !== undefined) {
+          console.log("welcome back, " + user.name);
+          localStorage.setItem("isAuth", "yes");
+          localStorage.setItem("user_detail",JSON.stringify({id:user.id, name:user.name, image:user.image}))
+        } else {
+          console.log("First time? welcome, "+result.user.displayName);
+          add_user(result.user.uid, 0, result.user.displayName, result.user.photoURL)
+          localStorage.setItem("isAuth", "yes");
+          localStorage.setItem("user_detail",JSON.stringify({id:result.user.uid, name:result.user.displayName, image:result.user.photoURL}))
+        }
+      })
     }).catch((error) => {
     });
-
-  // setPersistence(auth, inMemoryPersistence)
-  //   .then(() => {
-  //     return signInWithPopup(auth, provider).then((result) => {
-  //       const user = result.user;
-  //       console.log("welcome back, " + user.displayName);
-  //     });
-  //   })
-  //   .catch((error) => {
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //   });
 }
 window.signin = signin;
 
@@ -160,7 +153,7 @@ async function tryToGetAuth() {
   return auth;
 }
 
-function signout() {
+export function signout() {
   if (!localStorage.getItem("isAuth")) {
     console.log("please sign in");
   } else {
@@ -168,6 +161,7 @@ function signout() {
       signOut(auth).then(() => {
         console.log("see you later");
         localStorage.removeItem("isAuth");
+        localStorage.removeItem("user_detail");
       }).catch((error) => {
 
       });
@@ -176,9 +170,9 @@ function signout() {
 }
 window.signout = signout;
 
-function getauth() {
+export function getauth() {
   console.log(getAuth());
-  if (!localStorage.getItem("isAuth")) {
+  if (!localStorage.getItem("isAuth") || !localStorage.getItem("user_detail")) {
     console.log("please sign in");
   } else {
     tryToGetAuth().then((auth) => {

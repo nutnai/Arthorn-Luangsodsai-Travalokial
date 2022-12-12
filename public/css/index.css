@@ -208,6 +208,11 @@
     color: #FFFFFF;
 }
 
+#roob:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+
 .blue:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     cursor: pointer;
@@ -215,11 +220,99 @@
 .blue:active {
     filter: grayscale(70%)brightness(150%);
 }
-.yelloww:hover {
+.yellow:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     cursor: pointer;
 }
-.yelloww:active {
+.yellow:active {
     filter: grayscale(50%)brightness(105%);
 }
     
+#username{
+    position: absolute;
+    width: 547px;
+    height: 52px;
+    left: 574px;
+    top: 20px;
+
+font-family: 'Inria Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 37px;
+line-height: 45px;
+
+color: #FFFFFF;
+text-align: right;
+}
+
+#roob{
+    cursor: pointer;
+    position: absolute;
+    width: 71px;
+    height: 73px;
+    left: 1142px;
+    top: 37px;
+
+    border-radius: 217px;
+    background: #c0c8f7;
+}
+#hua:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;   
+}
+
+#home{
+    position: relative;
+    left: 230px;
+    top: 62px;
+    width: 38px;
+    height: 42px;
+}
+#bed{
+    position: relative;
+    top:2px;
+    left:25px;
+    width: 72px;
+    height: 88px;
+}
+#calendar1{
+    position: relative;
+    width: 55px;
+    height: 60px;
+    left:22px;
+    top: 9px;
+}
+
+#person{
+    position: relative;
+    width: 34px;
+    height: 43px;
+    left:27px;
+    top: 14px;
+}
+
+#patitin{
+    position: relative;
+    width: 120px;
+    height: 43px;
+    left:33px;
+    top: -17px;
+}
+
+input[type = "date"]{
+    
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+}
+
+input[type = "date"]:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}

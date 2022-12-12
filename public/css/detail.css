@@ -1,3 +1,5 @@
+@import url("https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_heart.png");
+
 #sifah{
     /* Rectangle 1 */
     position: absolute;
@@ -277,3 +279,83 @@ text-align: right;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     cursor: pointer;
 } */
+
+/* #heart{
+    position: absolute;
+    background: url("https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_heart.png") no-repeat;
+    background-position: left;
+    background-size: 2900%;
+    width:90px;
+    height: 90px;
+    top:173px;
+    left: 1032px;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
+}
+
+#heart-btn{
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+#heart#heartactive{
+    background-position: right;
+    animation: animate .8s steps(28) 1;
+}
+
+
+
+@keyframes animate {
+    0%{
+      background-position: left;
+    }
+    100%{
+      background-position: right;
+    }
+  } */
+
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+.heart-btn{
+  position: absolute;
+  top: 192px;
+  left: 1070px;
+  transform: translate(-50%,-50%);
+}
+.content{
+  padding: 13px 16px;
+  display: flex;
+  border: none;
+  cursor: pointer;
+}
+.content.heart-active{
+  border-color: none;
+  background: none;
+}
+.heart{
+  position: absolute;
+  background: url("https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_heart.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 120px;
+  width: 120px;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%,-50%);
+}
+
+.heart.heart-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+
+  

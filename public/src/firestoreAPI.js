@@ -34,9 +34,15 @@ export async function get_hotel_list(address, time, number_of_customer) {
 }
 // console.log(get_hotel_list("หัวลำโพง"));
 
+export async function get_hotel_list_by_id (id_hotel) {
+    const hotel = await getDoc(doc(db, "hotel_list", id_hotel));
+    return hotel.data()
+}
+// get_hotel_list_by_id("cen38MZ8YL0GSxk37Kq5").then((result)=>{console.log(result);})
+
+
 //ดูข้อมูลคอมเมนต์ตอนแสดงรายละเอียดโรงแรม
 export async function get_review (id_review) {
-    const q = query(collection(db, "review_list"));
     const querySnapshot = await getDoc(doc(db, "review_list", id_review));
     return querySnapshot.data()
 }
@@ -88,6 +94,7 @@ async function add_hotel_list(name, address, number_of_customer, price, facility
         id_landlord : id_landlord
     });
 }
+
 async function thotel () {
     var name = "ไอเฮา";
     var address = ["หัวลำโพง","กรุงเทพ"];

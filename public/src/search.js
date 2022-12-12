@@ -28,8 +28,8 @@ function getDBHotel() {
 
       var idHotel = document.getElementById("idHotel");
       var newIdHotel = idHotel.cloneNode();
-      newBlock.appendChild(newIdHotel);
       newIdHotel.innerHTML = result[i]["id"];
+      newBlock.appendChild(newIdHotel);
 
       var roop = document.getElementById("roop");
       var newRoop = roop.cloneNode();

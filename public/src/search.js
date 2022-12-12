@@ -12,12 +12,10 @@ function getDBHotel() {
     .split("&");
   var address = decodeURIComponent(input[0].replace(/\+/g, " "));
   var number_of_customer = input[1];
-  console.log(address);
   get_hotel_list(address, "", input[1]).then((result) => {
     console.log(result);
 
     for (let i = 0; i < result.length; i++) {
-      console.log(result[i]["address"]);
       //   document.getElementById("lowname").innerHTML = address;
       //   console.log(result[i]["number_of_customer"]);
       //   document.getElementById("lowname").innerHTML = number_of_customer;
@@ -27,6 +25,11 @@ function getDBHotel() {
       var newBlock = block.cloneNode();
       newBlock.style.top = ((i + 1) * 254).toString() + "px";
       newBlock.style.display = "";
+
+      var idHotel = document.getElementById("idHotel");
+      var newIdHotel = idHotel.cloneNode();
+      newBlock.appendChild(newIdHotel);
+      newIdHotel.innerHTML = result[i]["id"];
 
       var roop = document.getElementById("roop");
       var newRoop = roop.cloneNode();
@@ -63,9 +66,6 @@ function getDBHotel() {
       newLownamekonPak.style.left = (5).toString() + "px";
       newLownameAddress.appendChild(newLownamekonPak);
       newLownamekonPak.innerHTML = "Visitor : "+number_of_customer;
-
-
-
       addBlock.appendChild(newBlock);
     }
   });
@@ -74,3 +74,7 @@ function getDBHotel() {
 }
 getDBHotel();
 //result[i]["price"]["number_of_customer"];
+function selectHotel (node) {
+  window.location.href = 'detail.html?'+node.children.item(0).innerHTML
+}
+window.selectHotel = selectHotel;

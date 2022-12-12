@@ -358,4 +358,21 @@ text-align: right;
   }
 }
 
+/* .star{
+    position: relative;
+    width: 40px;
+    height:40px;
+    top: 150px;
+    left: 350px;
+} */
+.htpic1{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 26px;
+  border-radius: 10px;
+}
+
+
   

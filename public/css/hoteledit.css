@@ -1,9 +1,9 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-}
+} */
 #sifah{
     /* Rectangle 1 */
     position: absolute;
@@ -19,7 +19,7 @@
     width: 261.02px;
     height: 60px;
     left: 22px;
-    top: 64px;
+    top: 24px;
     cursor: pointer;
 
     font-family: 'Inria Sans';
@@ -305,7 +305,7 @@
     width: 381px;
     height: 55px;
     left: 390px;
-    top: 208px;
+    top: 180px;
     
     font-family: 'Inria Sans';
     font-style: normal;
@@ -555,4 +555,103 @@ input[type="button"]:active {
     top: 62px;
     width: 38px;
     height: 42px;
+}
+#person{
+    position: relative;
+    width: 25px;
+    height: 34px;
+    left:27px;
+    top: 14px;
+}
+#username{
+    position: absolute;
+    width: 547px;
+    height: 52px;
+    left: 574px;
+    top: 20px;
+
+font-family: 'Inria Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 37px;
+line-height: 45px;
+
+color: #FFFFFF;
+text-align: right;
+}
+
+#roob{
+    cursor: pointer;
+    position: absolute;
+    width: 71px;
+    height: 73px;
+    left: 1142px;
+    top: 37px;
+
+    border-radius: 217px;
+    background: #c0c8f7;
+}
+
+#roob:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+#hua:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;   
+}
+
+#regis{
+    /* Component 2 */
+    position: absolute;
+    width: 151px;
+    height: 55px;
+    left: 886px;
+    top: 38px;
+    
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #1A3244;
+    border: 0px;
+    background: #FFEB85;
+    border-radius: 20px;
+}
+#signin{
+    /* Component 3 */
+    position: absolute;
+    width: 151px;
+    height: 55px;
+    left: 1067px;
+    top: 38px;
+
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #1A3244;
+    border: 0px;
+
+    background: #FFEB85;
+    border-radius: 20px;
+}
+.blue:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+.blue:active {
+    filter: grayscale(70%)brightness(150%);
+}
+.yellow:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+
+.yellow:active {
+    filter: grayscale(50%)brightness(105%);
 }

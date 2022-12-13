@@ -40,7 +40,7 @@
 #yellow{
     position: absolute;
     width: 206px;
-    height: 866px;
+    height: 1700px;
     left: 0px;
     top: 148px;
 
@@ -141,7 +141,7 @@
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 29px;
 
     color: #1A3244;
@@ -320,7 +320,7 @@ text-align: right;
 .heart-btn{
   position: absolute;
   top: 192px;
-  left: 1070px;
+  left: 1220px;
   transform: translate(-50%,-50%);
 }
 .content{
@@ -373,6 +373,122 @@ text-align: right;
   margin-top: 26px;
   border-radius: 10px;
 }
+.rating{
+    position: relative;
+    left: -560px;
+    top: 25px;
+}
+
+.checked{
+    color: #eecb1d;
+    
+}
+
+#address{
+    position: relative;
+    top: 560px;
+    left:-600px;
+    width: 600px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+#facility1{
+    position: relative;
+    top: 640px;
+    left:-600px;
+    width: 600px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+#number_of_customer{
+    position: relative;
+    top: 720px;
+    left:-600px;
+    width: 600px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+#price1{
+    position: relative;
+    top: 498px;
+    left:-400px;
+    width: 600px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+
+#landlord{
+    position: relative;
+    top: 514px;
+    left:-600px;
+    width: 600px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+#phone{
+    position: relative;
+    top: 514px;
+    left:-600px;
+    width: 600px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+#email{
+    position: relative;
+    top: 514px;
+    left:-600px;
+    width: 600px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+}
+#details{
+    position: relative;
+    top: 280px;
+    
+    width: 600px;
+}
+
+.htpic2{
+    display: block;
+  margin-left: 15px;
+  margin-right: auto;
+  width: 148px;
+  margin-top: 3px;
+  border-radius: 10px;
+}
+.htpic3{
+    display: block;
+  margin-left: 200px;
+  margin-right: auto;
+  width: 148px;
+  margin-top: -93px;
+  border-radius: 10px;
+}
+
+
+
+
 
 
   

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/detail.css">
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script type="module" src="/public/src/detail.js"></script>
     <title>detail</title>
     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
@@ -56,15 +59,19 @@
 
     <input type="button" value="Reserve" id="reserve" class="yellow">
     <p id="hotel"></p>
-    <div class="rating">
-      
-    </div>
+
     
+
     <div id="picyai">
-      <img src="https://storage.googleapis.com/travalokail-55abf.appspot.com/ht/1.jpg" alt="" class="htpic1">
+      <img src="" alt="" class="htpic1" id="picyaii">
 
     </div>
-    <div id="piceic"></div>
+    <div id="piceic">
+      
+        <img src="" alt="" class="htpic2" id="piceic1">
+        <img src="" alt="" class="htpic3" id="piceic2">
+      
+    </div>
 
 
 
@@ -76,6 +83,48 @@
         
     </div>
 
+
+    <div class="rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+  </div>
+  
+  <div id="details">
+  <div id="address">
+    location :
+</div>
+
+
+<div id="facility1">
+    facility :
+</div>
+
+<div id="number_of_customer">
+  People
+</div>
+
+<div id="price1">
+  Price
+</div>
+
+<div  id="landlord">
+    Landlord : 
+</div>
+
+<div id="phone">
+  tel : 
+</div>
+
+<div id="email">
+  email :
+</div>
+</div>
+
+
+
     <script>
       $(document).ready(function(){
         $('.content').click(function(){
@@ -84,6 +133,11 @@
         });
       });
     </script>
+
+
+
+
+
 </body>
 </html>
 

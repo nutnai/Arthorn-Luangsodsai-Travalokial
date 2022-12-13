@@ -138,8 +138,9 @@ export function signin() {
           localStorage.setItem("user_detail",JSON.stringify({id:user.id, name:user.name, image:user.image}))
         } else {
           console.log("First time? welcome, "+result.user.displayName);
-          add_user(result.user.uid, 0, result.user.displayName, result.user.photoURL)
-          localStorage.setItem("isAuth", "yes");
+          add_user(result.user.uid, 0, result.user.displayName, result.user.photoURL).then((result) => {
+            localStorage.setItem("isAuth", "yes");
+          })
           localStorage.setItem("user_detail",JSON.stringify({id:result.user.uid, name:result.user.displayName, image:result.user.photoURL}))
         }
       })
@@ -148,37 +149,61 @@ export function signin() {
 }
 window.signin = signin;
 
-async function tryToGetAuth() {
-  var auth = await getAuth();
-  return auth;
-}
-
 export function signout() {
   if (!localStorage.getItem("isAuth")) {
     console.log("please sign in");
   } else {
-    tryToGetAuth().then((auth) => {
-      signOut(auth).then(() => {
-        console.log("see you later");
-        localStorage.removeItem("isAuth");
-        localStorage.removeItem("user_detail");
-      }).catch((error) => {
+    const auth = getAuth()
+    signOut(auth).then(() => {
+      console.log("see you later");
+      localStorage.removeItem("isAuth");
+      localStorage.removeItem("user_detail");
+    }).catch((error) => {
 
-      });
     });
   }
 }
 window.signout = signout;
 
 export function getauth() {
-  console.log(getAuth());
   if (!localStorage.getItem("isAuth") || !localStorage.getItem("user_detail")) {
     console.log("please sign in");
+    return null;
   } else {
-    tryToGetAuth().then((auth) => {
-      console.log("I am " + auth.currentUser.displayName);
-    });
+    var auth = getAuth();
+    console.log("I am " + auth.currentUser.displayName);
+    return auth;
   }
-
 }
 window.getauth = getauth;
+
+export async function permission (activity) {
+  var ret = -1;
+  const auth = getAuth();
+  if (auth.currentUser == null) return ret;
+  await get_user(auth.currentUser.uid).then((result) => {
+    if (result == null) return ret;
+    const type = result.type
+    localStorage.setItem("isAuth", "yes");
+    localStorage.setItem("user_detail",JSON.stringify({id:result.id, name:result.name, image:result.image}))
+    switch (activity) {
+      case "clickProfile":
+        ret = type;
+        break;
+      case "hotel_admin":
+        ret = type==2
+        break
+      case "profile":
+        ret = type==1
+        break
+      default:
+        ret = -1;
+        break;
+    }
+  })
+  return ret;
+}
+
+export function authed () {
+  return localStorage.getItem("isAuth") && localStorage.getItem("user_detail") && localStorage.getItem("isAuth")
+}

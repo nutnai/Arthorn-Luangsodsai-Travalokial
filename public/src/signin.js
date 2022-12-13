@@ -1,9 +1,10 @@
-import { signin } from "./auth.js";
+import { signin, signout ,authed } from "./auth.js";
 
+signout()
 function signIn() {
     signin();
     (async() => {
-        while(!localStorage.getItem("isAuth") || !localStorage.getItem("user_detail")) {
+        while(!authed()) {
             console.log("wait...");
             await new Promise(resolve => setTimeout(resolve, 1000));
         }

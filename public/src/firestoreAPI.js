@@ -51,11 +51,13 @@ export async function get_review (id_review) {
 //ดูข้อมูลผู้ใช้จากไอดี
 export async function get_user (id_user) {
     const userSnapshot = await getDoc(doc(db, "user_list", id_user));
-    return userSnapshot.data();
+    var ret = userSnapshot.data()
+    ret["id"] = userSnapshot.id
+    return ret;
 }
 // get_user("zqF2ASPu6tISEcg7dkyC").then((result)=>{console.log(result);})
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////add
-function createMapPrice (number_of_customer, price){
+export function createMapPrice (number_of_customer, price){
     var ret = new Object();
     for (var i=0; i<number_of_customer.length; i++) {
         ret[number_of_customer[i]]=price[i];
@@ -86,7 +88,7 @@ async function addReview(id_review, id_hotel) {
 }
 ////////////////////////////////////////config
 //hotel
-async function add_hotel_list(name, address, number_of_customer, price, facility, review, image, piority, star, id_landlord) {
+export async function add_hotel_list(name, address, number_of_customer, price, facility, review, image, piority, star, id_landlord, email, phone) {
     await addDoc(collection(db, "hotel_list"), {
         name : name,
         address : address,
@@ -97,8 +99,10 @@ async function add_hotel_list(name, address, number_of_customer, price, facility
         image : image,
         piority : piority,
         star : star,
-        id_landlord : id_landlord
-    });
+        id_landlord : id_landlord,
+        email : email,
+        phone : phone
+    })
 }
 
 async function thotel () {
@@ -107,12 +111,14 @@ async function thotel () {
     var number_of_customer = [1,2,4];
     var price = [600,700,1200];
     var facility = ["เตียง", "ทีวี", "ตู้เย็น", "แอร์"];
-    var review = [await add_review("zqF2ASPu6tISEcg7dkyC",5.0,"ดีคับ")];
+    var review = [];
     var image = ["ht_1", "ht_2", "ht_3"];
     var piority = 0;
-    var star = 5;
+    var star = 0;
     var id_landlord = "Aiu7zv5DXjBFfWHfE1co";
-    add_hotel_list(name, address, number_of_customer, createMapPrice(number_of_customer,price), facility, review, image, piority, star, id_landlord);
+    var email = "maibokna@gmail.com"
+    var phone = "0827654213"
+    add_hotel_list(name, address, number_of_customer, createMapPrice(number_of_customer,price), facility, review, image, piority, star, id_landlord, email, phone);
     //
 }
 window.thotel = thotel;

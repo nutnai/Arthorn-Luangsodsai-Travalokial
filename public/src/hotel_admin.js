@@ -16,7 +16,7 @@ window.signOut = signOut;
 
 async function  load() {
     
-    // await permission("profile").then((result) => {
+    // await permission("hotel_admin").then((result) => {
     //     console.log(result);
     //     if (result!=true) window.location.href = "/public/web/signin.html";
     // })

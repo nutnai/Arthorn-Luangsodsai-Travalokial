@@ -104,13 +104,16 @@ async function load() {
             var newNode = document.createElement("span")
             newNode.innerHTML = result.number_of_customer[i]
             newNode.style.position = "absolute"
-            newNode.style.width = "200px"
-            newNode.style.height = "200px"
+            newNode.style.width = "45px"
+            newNode.style.height = "100px"
             newNode.style.fontFamily = "'Inria Sans'"
+            newNode.style.marginRight = "100px"
             newNode.style.top = "100px"
+            
             newNode.style.color = "#1A3244";
             newNode.style.left = (86+(i*120)).toString()+"px"
             newNode.style.fontSize = "100px"
+            newNode.onclick = "clickBook(this.innerHTML);"
 
             addHere.appendChild(newNode)
         }
@@ -120,3 +123,8 @@ async function load() {
     })
 }
 load()
+
+function clickBook (number_of_customer) {
+    console.log(number_of_customer);
+}
+window.clickBook = clickBook;

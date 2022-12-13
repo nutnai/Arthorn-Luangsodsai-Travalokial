@@ -374,5 +374,32 @@ text-align: right;
   border-radius: 10px;
 }
 
+#all {
+    position: absolute;
+    background-color: black;
+    right: 0px;
+    top: 100px;
+    width: 1000px;
+    height: 500px;
+}
+#all2 {
+    position: absolute;
+    background-color: white;
+    right: 25px;
+    top: 25px;
+    width: 950px;
+    height: 450px;
+}
+#textall1 {
+    left: 30px;
+    position: absolute;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 29px;
 
+    color: #1A3244;
+}
+#addNumberHere, span
   

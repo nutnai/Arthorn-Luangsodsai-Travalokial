@@ -29,3 +29,27 @@ async function showDetail () {
 
 }
 showDetail()
+
+
+async function clickReserve () {
+    
+
+}
+window.clickReserve = clickReserve
+
+async function load() {
+    var href = window.location.href
+    var idHotel = href.slice(href.indexOf("?")+1,href.length)
+    var addHere = document.getElementById("addNumberHere");
+    
+    await get_hotel_list_by_id(idHotel).then((result) => {
+        result.number_of_customer.forEach(element => {
+            var newNode = document.createElement("span")
+            newNode.innerHTML = element
+            newNode.style.position = "absolute"
+            addHere.appendChild(newNode)
+        });
+        
+    })
+}
+load()

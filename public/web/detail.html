@@ -20,7 +20,7 @@
         </img>
         <div id="auth1" >
 
-            <div id="roob" onclick="window.location.href='Profile.html'">
+            <div id="roob" onclick="clickProfile()">
             </div>
             <p id="username"> username</p>
             
@@ -54,7 +54,7 @@
     </div>
 
 
-    <input type="button" value="Reserve" id="reserve" class="yellow">
+    <input type="button" value="Reserve" id="reserve" class="yellow" onclick="clickReserve()">
     <p id="hotel"></p>
     <div class="rating">
       
@@ -75,6 +75,14 @@
         
         
     </div>
+    <div id="all">
+      <div id="all2"></div>
+      <p id="textall1">How many are you?</p>
+      <div id="addNumberHere">
+        <span>1</span>
+        <span>2</span>
+      </div>
+  </div> 
 
     <script>
       $(document).ready(function(){

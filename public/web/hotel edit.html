@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel editor</title>
     <script type="module" src="/public/src/hasTopRightAuth.js"></script>
+    <script type="module" src="/public/src/hotel_edit.js"></script>
 </head>
 <body>
     <div id="sifah">
@@ -24,7 +25,7 @@
       </img>
         <div id="auth1"  >
   
-          <div id="roob" onclick="window.location.href='Profile.html'">
+          <div id="roob" onclick="clickProfile()">
           </div>
           <p id="username"> username</p>
           
@@ -49,7 +50,7 @@
         <div id="bluebox"></div>
         <div id="yellowbox"></div>
         <div id="whitebox"></div>
-        <input id="save"type="button" value="save">
+        <input id="save"type="button" value="save" onclick="save()">
         <div class="line1">
             <div id="linee1"></div>
             <div id="linee2"></div>
@@ -58,26 +59,26 @@
             <div id="linee5"></div>
             <div id="linee6"></div>
             <div id="linee7"></div>
+            <div id="linee8"></div>
         </div>
-        <input id="edit1"type="button" value="Edit">
+        <!-- <input id="edit1"type="button" value="Edit">
         <input id="edit2"type="button" value="Edit">
         <input id="edit3"type="button" value="Edit">
         <input id="edit4"type="button" value="Edit">
         <input id="edit5"type="button" value="Edit">
         <input id="edit6"type="button" value="Edit">
-        <input id="edit7"type="button" value="Edit">
+        <input id="edit7"type="button" value="Edit"> -->
         <input id="na"type="text" placeholder="Name...">
         <input id="email"type="text" placeholder="E-mail...">
         <input id="Phonnumber"type="text" placeholder="Phone number...">
         <input id="Adrress"type="text" placeholder="Address...">
-        
         <input id="Facility"type="text" placeholder="Facility...">
-        <input id="addimage"type="text" placeholder="Add image...">
+        
+        <input id="people"type="text" placeholder="People...">
         <input id="price"type="text" placeholder="Price...">
-
-
+        <input id="image"type="text" placeholder="image...">
+  
         <p id="personal">About Hotel</p>
-        <input id="logout"type="button"value="Log Out" onclick="window.location.href='/public/index.html'">
     </div>
 
 </body>

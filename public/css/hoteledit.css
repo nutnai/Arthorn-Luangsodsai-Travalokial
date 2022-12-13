@@ -34,7 +34,7 @@
 #yellowbox{
     position: absolute;
     width: 845px;
-    height: 1070px;
+    height: 1170px;
     left: 356px;
     top: 248px;
 
@@ -57,7 +57,7 @@
 #whitebox{
     position: absolute;
     width: 801px;
-    height: 1027px;
+    height: 1127px;
     left: 377px;
     top: 272px;
     
@@ -68,7 +68,7 @@
     width: 107px;
     height: 45px;
     left: 1011px;
-    top: 1212px;
+    top: 1330px;
     padding: 0;
     border: none;
     background: none;
@@ -149,6 +149,16 @@
     height: 0px;
     left: 398px;
     top: 1165px;
+    
+    border: 2px solid #D9D9D9;
+    transform: rotate(-0.15deg);
+}
+#linee8{
+    position: absolute;
+    width: 749px;
+    height: 0px;
+    left: 398px;
+    top: 1300px;
     
     border: 2px solid #D9D9D9;
     transform: rotate(-0.15deg);
@@ -417,7 +427,7 @@
     font-size: 24px;
     line-height: 29px;
 
-    color: #828282;
+    color: #1a3244;
 
 }
 #email{
@@ -434,7 +444,7 @@
     font-size: 24px;
     line-height: 29px;
 
-    color: #828282
+    color: #1a3244;
 
 }
 #Phonnumber{
@@ -450,7 +460,7 @@
     font-size: 24px;
     line-height: 29px;
 
-    color: #828282;
+    color: #1a3244;
 
 }
 #Adrress{
@@ -466,7 +476,7 @@
     font-size: 24px;
     line-height: 29px;
     
-    color:#828282 ;
+    color: #1a3244;
 }
 #Facility{
     position: absolute;
@@ -481,9 +491,9 @@
     font-size: 24px;
     line-height: 29px;
     
-    color:#828282 ;
+    color: #1a3244;
 }
-#price{
+#people{
     position: absolute;
     width: 580px;
     height: 38px;
@@ -496,9 +506,9 @@
     font-size: 24px;
     line-height: 29px;
     
-    color:#828282 ;
+    color: #1a3244;
 }
-#addimage{
+#price{
     position: absolute;
     width: 580px;
     height: 38px;
@@ -511,7 +521,22 @@
     font-size: 24px;
     line-height: 29px;
     
-    color:#828282 ;
+    color: #1a3244;
+}
+#image{
+    position: absolute;
+    width: 580px;
+    height: 38px;
+    left: 422px;
+    top: 1260px;
+    border: none;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #1a3244;
 }
 #blankk{
     position: absolute;

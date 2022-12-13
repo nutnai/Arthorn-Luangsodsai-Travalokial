@@ -1,7 +1,7 @@
-
+import {getauth, permission, authed} from "./auth.js"
 
 async function load() {
-    if (localStorage.getItem("isAuth") && localStorage.getItem("user_detail")) {
+    if (authed()) {
         var user = JSON.parse(localStorage.getItem("user_detail"))
         console.log("I'm in!");
         if (document.getElementById("auth0") != null){
@@ -28,3 +28,20 @@ async function load() {
     }
 }
 load()
+
+async function clickProfile() {
+    console.log("click profile!");
+    permission("clickProfile").then((result) => {
+        if (result == 0) {
+            window.location.href = "/public/web/profile.html";
+        } else if (result == 1) {
+            window.location.href = "/public/web/hotel admin.html";
+        } else if (result == 2) {
+            window.location.href = "/public/web/dashboard.html";
+        } else {
+            window.location.href = "/public/web/signin.html"
+        }
+    })
+    
+}
+window.clickProfile = clickProfile

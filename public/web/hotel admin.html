@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/hotel admin.css">
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+    <script type="module" src="/public/src/hotel_admin.js"></script>
     <title>Hotel's Admin</title>
 </head>
 <body style="background-color: white;">
@@ -34,11 +35,11 @@
         <input id="na"type="text" placeholder="name...">
         <input id="email"type="text" placeholder="email...">
         <input id="Phonnumber"type="text" placeholder="Phone number...">
-        <input id="Adrress"type="text" placeholder="address...">
+        <input id="Address"type="text" placeholder="address...">
 
         <p id="personal">Landlord's details</p>
         <input id="delete"type="button"value="Delete accout" onclick="myFunction()">
-        <input id="logout"type="button"value="Log Out">
+        <input id="logout"type="button"value="Log Out" onclick="signOut()">
         <p class="reset">Reset password ?</p>
         <p id="blankk"> </p>
     <div class="popup" id="all">

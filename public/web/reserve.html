@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/reserve.css">
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+    <script type="module" src="/public/src/reserve.js"></script>
     <title>Reserved</title>
 </head>
 <body style="background-color: white;">
@@ -22,13 +23,13 @@
         <div id="whitebox"></div>
 
         <div id="informA">
-            a
+            
         </div>
         <div id="informB">
-            b
+            
         </div>
         <div id="informC">
-            c
+            
         </div>
 
         <!-- <input id="but1"type="button" value="save">
@@ -50,42 +51,6 @@
 
 
         <p id="personal">Booked</p>
-        <input id="delete"type="button"value="Delete accout" onclick="myFunction()">
-        <input id="logout"type="button"value="Log Out">
-        <p class="reset">Reset password ?</p>
-        <p id="blankk"> </p>
-    <div class="popup" id="all">
-        <span class="popuptext" id="myPopup"></span>
-        <span class = "asky"id="ask"> Do &nbsp;you&nbsp;sure&nbsp;&#x3F;</span>  
-            <input class= "noo"type="button" value="No" id="no" onclick="closeWin()">
-            <input class="yess"type="button" value="Yes" id="yes">
-    </div>
-    <div class="admin">
-    
-    
-      
-    <script>
-        // When the user clicks on <div>, open the popup
-        function myFunction() {
-            
-        var popup = document.getElementById("myPopup");
-        var pop1 = document.getElementById("ask");
-        var pop2 =document.getElementById("no");
-        var pop3 = document.getElementById("yes");
-        
-        popup.classList.toggle("show");
-        pop1.classList.toggle("show");
-        pop2.classList.toggle("show");
-        pop3.classList.toggle("show");
-        
-        }
-        function closeWin(){
-            
-            document.getElementById("myPopup").style.display = "none";
-            document.getElementById("ask").style.display = "none";
-            document.getElementById("no").style.display = "none";
-            document.getElementById("yes").style.display = "none";
-        }
     </script>
     
     

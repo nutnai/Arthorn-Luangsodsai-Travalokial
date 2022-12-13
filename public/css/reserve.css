@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 #sifah{
     /* Rectangle 1 */
@@ -58,17 +59,18 @@
     height: 82px;
     left: 356px;
     top: 185px;
-
+    
     background: #4399FF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;}
+    border-radius: 10px;
+}
 #whitebox{
     position: absolute;
     width: 801px;
     height: 637px;
     left: 377px;
     top: 272px;
-
+    
     background: #FFFFFF;
     border-radius: 10px;}
 #but1{
@@ -97,7 +99,7 @@
     height: 0px;
     left: 396px;
     top: 770px;
-
+    
     border: 2px solid #D9D9D9;
     transform: rotate(-0.15deg);
 }
@@ -107,16 +109,17 @@
     height: 0px;
     left: 396px;
     top: 640px;
-
+    
     border: 2px solid #D9D9D9;
-    transform: rotate(-0.15deg);}
+    transform: rotate(-0.15deg);
+}
 #linee3{
     position: absolute;
     width: 749px;
     height: 0px;
     left: 396px;
     top: 517px;
-
+    
     border: 2px solid #D9D9D9;
     transform: rotate(-0.15deg);
 }
@@ -126,7 +129,7 @@
     height: 0px;
     left: 398px;
     top: 402px;
-
+    
     border: 2px solid #D9D9D9;
     transform: rotate(-0.15deg);
 }
@@ -220,41 +223,42 @@
     height: 55px;
     left: 390px;
     top: 208px;
-
+    
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-
-    color: #FFFFFF;}
+    
+    color: #FFFFFF;
+}
 #delete{
-
+    
     position: absolute;
     width: 161px;
     height: 49px;
     left: 827px;
     top: 1052px;
-
+    
     padding: 0;
     border: none;
     background: none;
     cursor: pointer;
-
+    
     left: 0%;
     right: 0%;
     top: 0%;
     bottom: 0%;
 
-    background: #4399FF;
+    background: #BFDDFF;
     border-radius: 10px;
     position: absolute;
     width: 161px;
     height: 49px;
-
+        
     left: 838px;
     top: 980px;
-
+    
 
     font-family: 'Inria Sans';
     font-style: normal;
@@ -282,52 +286,96 @@
     border: none;
     background: none;
     cursor: pointer;
-
-    background: #4399FF;
+    
+    background: #BFDDFF;
     border-radius: 10px;
     width: 161px;
     height: 49px;
     left: 1041px;
     top: 980px;
-
+            
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-
+    
     color: #FFFEFE;
-
+    
 }
 .reset{
     position: absolute;
-
+        
     width: 209px;
     height: 29px;
     left: 1003px;
-    top: 1065px;
-
-
+    top: 1074px;
+    
+    
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     cursor: pointer;
-
-    color: #828282;}
-#na{
+    
+    color: #D9D9D9;}
+#informA{
     position: absolute;
+    
     width: 580px;
     height: 38px;
     left: 418px;
     top: 357px;
     font-family: 'Inria Sans';
     font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 38px;
+    border-radius: 10px;
+}
+#informB{
+    position: absolute;
+    
+    width: 580px;
+    height: 38px;
+    left: 418px;
+    top: 500px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 38px;
+    border-radius: 10px;
+}
+#informC{
+    position: absolute;
+    
+    width: 580px;
+    height: 38px;
+    left: 418px;
+    top: 700px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 38px;
+    border-radius: 10px;
+}
+
+
+/* #na{
+    position: absolute;
+    width: 580px;
+    height: 38px;
+    left: 418px;
+    top: 357px;
+    border: none;
+    font-family: 'Inria Sans';
+    font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
-    border: none;
 
     color: #828282;
 
@@ -340,7 +388,6 @@
     left: 422px;
     top: 472px;
     border: none;
-
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 300;
@@ -357,7 +404,6 @@
     left: 422px;
     top: 595px;
     border: none;
-
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 300;
@@ -379,9 +425,9 @@
     font-weight: 300;
     font-size: 24px;
     line-height: 29px;
-
+    
     color:#828282 ;
-}
+} */
 
 #blankk{
     position: absolute;
@@ -417,7 +463,6 @@
     line-height: 29px;
     visibility: hidden;
 
-
     color: #000000;
 }
 .popup.asky::after{
@@ -436,7 +481,7 @@
 
 }
 .popup .noo{
-
+    
     position: absolute;
     width: 168px;
     height: 59px;
@@ -457,7 +502,7 @@
     color: #FFFFFF;
 }
 .popup .noo::after{
-
+    
     position: absolute;
     width: 168px;
     height: 59px;
@@ -468,15 +513,15 @@
     border: none;
     cursor: pointer;
     visibility: visible;
-
+    
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-
+    
     color: #FFFFFF;
-}
+    }
 .popup .yess{
     position: absolute;
     width: 168px;
@@ -494,8 +539,6 @@
     font-size: 24px;
     line-height: 29px;
     /* identical to box height */
-
-
     color: #FFFFFF;
 
 }
@@ -505,7 +548,7 @@
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
-
+    
     position: absolute;
     width: 799px;
     height: 423px;
@@ -517,7 +560,7 @@
     border-radius: 10px;
     visibility: hidden
 }
-
+  
 /* Popup arrow */
 .popup .popuptext::after {
     position: absolute;
@@ -538,7 +581,7 @@
     height: 162px;
     left: 705px;
     top: 610px;
-
+  
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
@@ -547,7 +590,7 @@
 
     color: #000000;
 }
-
+  
 /* Popup arrow */
 .popup .asky::after {
     content: "";
@@ -568,10 +611,6 @@
     border-color: #555 transparent transparent transparent;
 }
 
-
-
-
-
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .popup .show {
     visibility: visible;
@@ -589,27 +628,9 @@
     from {opacity: 0;}
     to {opacity:1 ;}
 }
-input[type="button"]:hover {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;
-}
 
-input[type="button"]:active {
-    filter: grayscale(70%)brightness(150%);
-}
 
-#hua:hover{
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    cursor: pointer;   
-}
-#home{
-    position: relative;
-    left: 230px;
-    top: 62px;
-    width: 38px;
-    height: 42px;
-}
-#adminy{
+/* #adminy{
     position: absolute;
     width: 222px;
     height: 65px;
@@ -629,4 +650,25 @@ input[type="button"]:active {
     color: #FFFFFF;
 
 
+} */
+
+input[type="button"]:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+}
+
+input[type="button"]:active {
+    filter: grayscale(70%)brightness(150%);
+}
+
+#hua:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;   
+}
+#home{
+    position: relative;
+    left: 230px;
+    top: 62px;
+    width: 38px;
+    height: 42px;
 }

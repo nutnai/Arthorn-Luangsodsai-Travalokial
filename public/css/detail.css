@@ -115,8 +115,8 @@
     position: absolute;
     width: 139px;
     height: 52px;
-    left: 1094px;
-    top: 166px;
+    left: 155px;
+    top: 285px;
     background: #FFEB85;
     border-radius: 20px;
 
@@ -493,18 +493,21 @@ text-align: right;
 #all {
     position: absolute;
     background-color: black;
-    right: 0px;
-    top: 100px;
-    width: 1000px;
-    height: 500px;
+    right: 450px;
+    top: 400px;
+    width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    display : none;
 }
 #all2 {
     position: absolute;
     background-color: white;
     right: 25px;
     top: 25px;
-    width: 950px;
-    height: 450px;
+    width: 650px;
+    height: 250px;
+    border-radius: 10px;
 }
 #textall1 {
     left: 30px;
@@ -517,5 +520,5 @@ text-align: right;
 
     color: #1A3244;
 }
-#addNumberHere, span
+/* #addNumberHere, span */
   

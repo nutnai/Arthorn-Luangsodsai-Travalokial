@@ -56,6 +56,14 @@ export async function get_user (id_user) {
     return ret;
 }
 // get_user("zqF2ASPu6tISEcg7dkyC").then((result)=>{console.log(result);})
+
+export async function get_booked (id_booked) {
+    const bookedSnapshot = await getDoc(doc(db, "booked_list", id_booked));
+    var ret = bookedSnapshot.data()
+    ret["id"] = bookedSnapshot.id
+    return ret;
+}
+get_booked("RPDtR1vfB2BErLehv7gr").then((result)=>{console.log(result);})
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////add
 export function createMapPrice (number_of_customer, price){
     var ret = new Object();
@@ -177,5 +185,27 @@ function tt () {
 }
 window.tt = tt;
 
+//booked
+export async function add_booked (id_user, id_hotel, number_of_customer) {
+    var ret;
+    await addDoc(collection(db, "booked_list"), {
+        id_user : id_user,
+        id_hotel : id_hotel,
+        number_of_customer : number_of_customer
+    }).then((result) => {
+        ret = result.id
+    })
+    return ret;
+}
+
+function tbooked () {
+    var id_user = "UsAaanGHf6fFWRXk9n17arcykZt1";
+    var id_hotel = "cen38MZ8YL0GSxk37Kq5";
+    var number_of_customer = "2";
+    add_booked(id_user, id_hotel, number_of_customer).then((result) => {
+        console.log(result);
+    });
+}
+window.tbooked = tbooked;
 ////////////////////////////////////////////////////////////////////////////////////////////////set
 

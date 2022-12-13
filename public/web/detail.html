@@ -1,86 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/detail.css">
-    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/detail.css">
+  <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script type="module" src="/public/src/detail.js"></script>
-    <title>detail</title>
-    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
-    <script type="module" src="/public/src/hasTopRightAuth.js"></script>
+  <script type="module" src="/public/src/detail.js"></script>
+  <title>detail</title>
+  <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+  <script type="module" src="/public/src/hasTopRightAuth.js"></script>
 </head>
+
 <body>
-    <div id="sifah">
-        <p id="hua" onclick="window.location.href='/public/index.html'">Travarokail</p>
-        
-        <img id="home1" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
-            
-        </img>
-        <div id="auth1" >
+  <div id="sifah">
+    <p id="hua" onclick="window.location.href='/public/index.html'">Travarokail</p>
 
-            <div id="roob" onclick="clickProfile()">
-            </div>
-            <p id="username"> username</p>
-            
-        </div>
-        
-        <div id="auth0" style="display: none;" >
-            <input
-              type="button"
-              value="Register"
-              id="regis"
-              class="yellow"
-              onclick="window.location.href='/public/web/register.html'"
-            />
-            <input
-              type="button"
-              value="Sign in"
-              id="signin"
-              class="yellow"
-              onclick="window.location.href='/public/web/signin.html'"
-            />
-          </div>
+    <img id="home1" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
+
+    </img>
+    <div id="auth1">
+
+      <div id="roob" onclick="clickProfile()">
+      </div>
+      <p id="username"> username</p>
+
     </div>
-    <div id="yellow">
+
+    <div id="auth0" style="display: none;">
+      <input type="button" value="Register" id="regis" class="yellow"
+        onclick="window.location.href='/public/web/register.html'" />
+      <input type="button" value="Sign in" id="signin" class="yellow"
+        onclick="window.location.href='/public/web/signin.html'" />
     </div>
-    <input type="button" value="Price" id="price" class="blue">
-    <input type="button" value="Facilities" id="facility" class="blue">
-    <input type="button" value="Rate review" id="review" class="blue">
-    <div>
+  </div>
+  <div id="yellow">
+  </div>
+  <input type="button" value="Price" id="price" class="blue">
+  <input type="button" value="Facilities" id="facility" class="blue">
+  <input type="button" value="Rate review" id="review" class="blue">
+  <div>
     <input type="button" id="glass" class="blue">
-    <img  id = "glassess" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_magnifying%20glass.png" alt="snow">
-    </div>
+    <img id="glassess" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_magnifying%20glass.png"
+      alt="snow">
+  </div>
 
 
-    <input type="button" value="Reserve" id="reserve" class="yellow" onclick="clickReserve()">
-    <p id="hotel"></p>
-
-    
-
-    <div id="picyai">
-      <img src="" alt="" class="htpic1" id="picyaii">
-
-    </div>
-    <div id="piceic">
-      
-        <img src="" alt="" class="htpic2" id="piceic1">
-        <img src="" alt="" class="htpic3" id="piceic2">
-      
-    </div>
+  
+  <p id="hotel"></p>
 
 
 
+  <div id="picyai">
+    <img src="" alt="" class="htpic1" id="picyaii">
 
-    <div class="heart-btn">
-      <div class="content">
-        <span class="heart"></span>
-        
-        
+  </div>
+  <div id="piceic">
+
+    <img src="" alt="" class="htpic2" id="piceic1">
+    <img src="" alt="" class="htpic3" id="piceic2">
+
+  </div>
+
+
+
+
+  <div class="heart-btn">
+    <div class="content">
+      <span class="heart"></span>
+
+
     </div>
     <div id="all">
       <div id="all2"></div>
@@ -89,53 +82,53 @@
         <span>1</span>
         <span>2</span>
       </div>
-  </div> 
-
-
+    </div>
+    <input type="button" value="Reserve" id="reserve" class="yellow" onclick="clickReserve()">
+    
     <div class="rating">
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star"></span>
-  </div>
-  
-  <div id="details">
-  <div id="address">
-    location :
-</div>
+    </div>
+
+    <div id="details">
+      <div id="address">
+        location :
+      </div>
 
 
-<div id="facility1">
-    facility :
-</div>
+      <div id="facility1">
+        facility :
+      </div>
 
-<div id="number_of_customer">
-  People
-</div>
+      <div id="number_of_customer">
+        People
+      </div>
 
-<div id="price1">
-  Price
-</div>
+      <div id="price1">
+        Price
+      </div>
 
-<div  id="landlord">
-    Landlord : 
-</div>
+      <div id="landlord">
+        Landlord :
+      </div>
 
-<div id="phone">
-  tel : 
-</div>
+      <div id="phone">
+        tel :
+      </div>
 
-<div id="email">
-  email :
-</div>
-</div>
+      <div id="email">
+        email :
+      </div>
+    </div>
 
 
 
     <script>
-      $(document).ready(function(){
-        $('.content').click(function(){
+      $(document).ready(function () {
+        $('.content').click(function () {
           $('.content').toggleClass("heart-active")
           $('.heart').toggleClass("heart-active")
         });
@@ -147,6 +140,7 @@
 
 
 </body>
+
 </html>
 
 

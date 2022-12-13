@@ -89,7 +89,7 @@ showDetail()
 
 
 async function clickReserve () {
-    
+    document.getElementById("all").style.display = "";
 
 }
 window.clickReserve = clickReserve
@@ -100,12 +100,22 @@ async function load() {
     var addHere = document.getElementById("addNumberHere");
     
     await get_hotel_list_by_id(idHotel).then((result) => {
-        result.number_of_customer.forEach(element => {
+        for (let i=0; i<result.number_of_customer.length;i++) {
             var newNode = document.createElement("span")
-            newNode.innerHTML = element
+            newNode.innerHTML = result.number_of_customer[i]
             newNode.style.position = "absolute"
+            newNode.style.width = "200px"
+            newNode.style.height = "200px"
+            newNode.style.fontFamily = "'Inria Sans'"
+            newNode.style.top = "100px"
+            newNode.style.color = "#1A3244";
+            newNode.style.left = (86+(i*120)).toString()+"px"
+            newNode.style.fontSize = "100px"
+
             addHere.appendChild(newNode)
-        });
+        }
+
+
         
     })
 }

@@ -8,7 +8,7 @@ function signIn() {
             console.log("wait...");
             await new Promise(resolve => setTimeout(resolve, 1000));
         }
-        window.location.href = "/public/index.html"    
+        window.location.href = "../index.html"    
     })();
 }
 

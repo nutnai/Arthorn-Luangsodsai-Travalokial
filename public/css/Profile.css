@@ -91,6 +91,46 @@
     color: #FFFFFF;
 
 }
+#but2{
+    position: absolute;
+    width: 107px;
+    height: 45px;
+    left: 1011px;
+    top: 819px;
+    padding: 0;
+    border: none;
+    background: none;
+    background: #4399FF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+}
+#but3{
+    position: absolute;
+    width: 107px;
+    height: 45px;
+    left: 880px;
+    top: 819px;
+    padding: 0;
+    border: none;
+    background: none;
+    background: red;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+
+}
 #linee1{
     position: absolute;
     width: 749px;
@@ -129,90 +169,6 @@
 
     border: 2px solid #D9D9D9;
     transform: rotate(-0.15deg);
-}
-#edit1{
-    position: absolute;
-    width: 81px;
-    height: 41px;
-    left: 1035px;
-    top: 351px;
-    padding: 0;
-    border: none;
-    background: none;
-    background: #E7F2FF;
-    border-radius: 10px;
-    font-family: 'Inria Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #000000;
-
-}
-#edit2{
-    position: absolute;
-    width: 81px;
-    height: 41px;
-    left: 1035px;
-    top: 465px;
-
-    padding: 0;
-    border: none;
-    background: none;
-    background: #E7F2FF;
-    border-radius: 10px;
-    font-family: 'Inria Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #000000;
-
-}
-#edit3{
-    position: absolute;
-    position: absolute;
-    width: 81px;
-    height: 41px;
-    left: 1035px;
-    top: 590px;
-
-    padding: 0;
-    border: none;
-    background: none;
-    background: #E7F2FF;
-    border-radius: 10px;
-    font-family: 'Inria Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #000000;
-
-}
-#edit4{
-    position: absolute;
-    position: absolute;
-    width: 81px;
-    height: 41px;
-    left: 1035px;
-    top: 719px;
-    padding: 0;
-    border: none;
-    background: none;
-    background: #E7F2FF;
-    border-radius: 10px;
-    font-family: 'Inria Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #000000;
-
 }
 #personal{
     position: absolute;

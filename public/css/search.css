@@ -232,7 +232,7 @@
     top: 8.04%;
     bottom: 8.54%;
     background: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 #name{
     position: absolute;
@@ -429,4 +429,20 @@ input[type = "date"]:hover{
     height: 34px;
     left:27px;
     top: 14px;
+}
+.textSearch {
+    position: absolute;
+    top: 300px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 48px;
+}
+#sorry {
+    left: 530px;
+    color: rgba(255, 0, 0, 0.695);
+}
+#loading {
+    left: 830px;
 }

@@ -1,85 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/public/css/hoteledit.css">
-    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel editor</title>
-    <script type="module" src="/public/src/hasTopRightAuth.js"></script>
-    <script type="module" src="/public/src/hotel_edit.js"></script>
-</head>
-<body>
-    <div id="sifah">
-        <p
-          id="hua"
-          onclick="window.location.href='/public/index.html'"
-          onclick="window.location.href='/public/index.html'"
-        >
-          Travarokail
-        </p>
-        
-        <img id="home" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
-              
-      </img>
-        <div id="auth1"  >
-  
-          <div id="roob" onclick="clickProfile()">
-          </div>
-          <p id="username"> username</p>
-          
-      </div>
-        <div id="auth0" style="display: none;" >
-        <input
-          type="button"
-          value="Register"
-          id="regis"
-          class="yellow"
-          onclick="window.location.href='/public/web/register.html'"
-        />
-        <input
-          type="button"
-          value="Sign in"
-          id="signin"
-          class="yellow"
-          onclick="window.location.href='/public/web/signin.html'"
-        />
-      </div>
-    <div id="bady">
-        <div id="bluebox"></div>
-        <div id="yellowbox"></div>
-        <div id="whitebox"></div>
-        <input id="save"type="button" value="save" onclick="save()">
-        <div class="line1">
-            <div id="linee1"></div>
-            <div id="linee2"></div>
-            <div id="linee3"></div>
-            <div id="linee4"></div>
-            <div id="linee5"></div>
-            <div id="linee6"></div>
-            <div id="linee7"></div>
-            <div id="linee8"></div>
-        </div>
-        <!-- <input id="edit1"type="button" value="Edit">
-        <input id="edit2"type="button" value="Edit">
-        <input id="edit3"type="button" value="Edit">
-        <input id="edit4"type="button" value="Edit">
-        <input id="edit5"type="button" value="Edit">
-        <input id="edit6"type="button" value="Edit">
-        <input id="edit7"type="button" value="Edit"> -->
-        <input id="na"type="text" placeholder="Name...">
-        <input id="email"type="text" placeholder="E-mail...">
-        <input id="Phonnumber"type="text" placeholder="Phone number...">
-        <input id="Adrress"type="text" placeholder="Address...">
-        <input id="Facility"type="text" placeholder="Facility...">
-        
-        <input id="people"type="text" placeholder="People...">
-        <input id="price"type="text" placeholder="Price...">
-        <input id="image"type="text" placeholder="image...">
-  
-        <p id="personal">About Hotel</p>
-    </div>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../css/hoteledit.css">
+  <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel editor</title>
+  <script type="module" src="../src/hasTopRightAuth.js"></script>
+  <script type="module" src="../src/hotel_edit.js"></script>
+</head>
+
+<body>
+  <div id="sifah">
+    <p id="hua" onclick="window.location.href='../index.html'" onclick="window.location.href='../index.html'">
+      Travarokail
+    </p>
+
+    <img id="home" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
+
+    </img>
+    <div id="auth1">
+
+      <div id="roob" onclick="clickProfile()">
+      </div>
+      <p id="username"> username</p>
+
+    </div>
+    <div id="auth0" style="display: none;">
+      <input type="button" value="Register" id="regis" class="yellow"
+        onclick="window.location.href='../register.html'" />
+      <input type="button" value="Sign in" id="signin" class="yellow" onclick="window.location.href='../signin.html'" />
+    </div>
+    <p id="personal">About Hotel</p>
+    <div id="information">
+      <div id="yellowbox">
+        <div id="whitebox">
+          <p class="head">Hotel name :</p>
+          <input type="text" class="info" placeholder="Hotel name . . .">
+          <div class="line"></div>
+          <p class="head">Email contact :</p>
+          <input type="text" class="info" placeholder="Email contact . . .">
+          <div class="line"></div>
+          <p class="head">Phone contact :</p>
+          <input type="text" class="info" placeholder="Phone contact . . .">
+          <div class="line"></div>
+          <p class="head">Address :</p>
+          <input type="text" class="info" placeholder="Address . . .">
+          <div class="line"></div>
+          <p class="head">Facility :</p>
+          <input type="text" class="info" placeholder="Facility . . .">
+          <div class="line"></div>
+
+          <p class="head">Rate price :</p>
+          <input type="button" id="addRatePriceButton" value="+" onclick="zone('ratePriceZone','add')">
+          <input type="button" id="removeRatePriceButton" value="-" onclick="zone('ratePriceZone','remove')">
+          <div id="ratePriceZone">
+            <div>
+              <input type="number" class="ratePriceZone" value="-" style="width: 50px;">
+              <p class="ratePriceZoneText1">person(s)</p>
+              <input type="number" class="ratePriceZone" value="-">
+              <p class="ratePriceZoneText2">baht</p>
+            </div>
+          </div>
+          <div class="line"></div>
+          <p class="head">Image :</p>
+          <input type="file" id="image-upload" name="image-upload" accept="image/*" multiple>
+          <input id="save"type="button" value="save" onclick="save()">
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="button" id="delete" value="delete hotel" style="display: none;" onclick="document.getElementById('all').style.display=''";>
+  <div id="all" style="display: none">
+    <div id="bgall"></div>
+    <div id="all2">
+      <div id="booked" class="bgWhiteAll">
+        <p style="text-align: center;">Are you sure you want to delete this hotel?</p>
+        <input type="button" value="Back" id="backall" onclick="document.getElementById('all').style.display='none';">
+        <input type="button" value="Confirm" id="confirmall" onclick="clickDelete()">
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
+<style>
+  #yellowbox {
+    position: absolute;
+    width: 845px;
+    height: max-content;
+    left: 210px;
+    top: 300px;
+
+    background: #FFEB85;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+  }
+
+  #whitebox {
+    position: relative;
+    width: 94%;
+    height: 94%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1a3244;
+    margin: 3%;
+
+  }
+
+  #whitebox .info {
+    width: 500px;
+    position: absolute;
+    right: 0px;
+    display: inline-block;
+    text-align: right;
+    right: 30px;
+    margin-top: 30px;
+    font-size: 24px;
+    border: none;
+    background-color: rgb(218, 217, 217);
+  }
+
+  #whitebox .head {
+    position: relative;
+    font-size: 30px;
+    padding-left: 30px;
+    display: inline-block;
+  }
+
+  #addRatePriceButton {
+    position: relative;
+    border: none;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(155, 255, 4);
+    color: white;
+    font-size: 35px;
+  }
+
+  #removeRatePriceButton {
+    position: relative;
+    border: none;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 24, 24);
+    color: white;
+    font-size: 35px;
+  }
+
+  .ratePriceZone {
+    position: relative;
+    display: inline-block;
+    border: 0px;
+    background-color: rgb(218, 217, 217);
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1a3244;
+    left: 300px;
+  }
+
+  .ratePriceZoneText1 {
+    position: relative;
+    left: 300px;
+    display: inline-block;
+  }
+
+  .ratePriceZoneText2 {
+    position: absolute;
+    right: 30px;
+    display: inline-block;
+  }
+</style>

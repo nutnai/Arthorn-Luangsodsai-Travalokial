@@ -5,86 +5,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/css/detail.css">
+  <link rel="stylesheet" href="../css/detail.css">
   <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <script type="module" src="/public/src/detail.js"></script>
+  <script type="module" src="../src/detail.js"></script>
   <title>detail</title>
   <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
-  <script type="module" src="/public/src/hasTopRightAuth.js"></script>
+  <script type="module" src="../src/hasTopRightAuth.js"></script>
 </head>
 
 <body>
   <div id="sifah">
-    <p id="hua" onclick="window.location.href='/public/index.html'">Travarokail</p>
+    <p id="hua" onclick="window.location.href='../index.html'">Travarokail</p>
 
     <img id="home1" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
 
     </img>
     <div id="auth1">
-
       <div id="roob" onclick="clickProfile()">
       </div>
       <p id="username"> username</p>
-
     </div>
-
     <div id="auth0" style="display: none;">
       <input type="button" value="Register" id="regis" class="yellow"
-        onclick="window.location.href='/public/web/register.html'" />
-      <input type="button" value="Sign in" id="signin" class="yellow"
-        onclick="window.location.href='/public/web/signin.html'" />
+        onclick="window.location.href='../register.html'" />
+      <input type="button" value="Sign in" id="signin" class="yellow" onclick="window.location.href='../signin.html'" />
     </div>
   </div>
-  <div id="yellow">
-  </div>
-  <input type="button" value="Price" id="price" class="blue">
-  <input type="button" value="Facilities" id="facility" class="blue">
-  <input type="button" value="Rate review" id="review" class="blue">
-  <div>
-    <input type="button" id="glass" class="blue">
-    <img id="glassess" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_magnifying%20glass.png"
-      alt="snow">
-  </div>
 
-
-  
-  <p id="hotel"></p>
-
-
-
-  <div id="picyai">
-    <img src="" alt="" class="htpic1" id="picyaii">
-
-  </div>
-  <div id="piceic">
-
-    <img src="" alt="" class="htpic2" id="piceic1">
-    <img src="" alt="" class="htpic3" id="piceic2">
-
-  </div>
-
-
-
-
-  <div class="heart-btn">
-    <div class="content">
-      <span class="heart"></span>
-
-
+  <div id="information">
+    <p id="hotel"></p>
+    <div class="heart-btn">
+      <div class="content"><span class="heart"></span></div>
     </div>
-    <div id="all" style="display : none;">
-      <div id="all2"></div>
-      <p id="textall1">How many are you?</p>
-      <div id="addNumberHere">
-        <span>1</span>
-        <span>2</span>
-      </div>
-    </div>
-    <input type="button" value="Reserve" id="reserve" class="yellow" onclick="clickReserve()">
-    
+    <input type="button" value="Reserve" id="reserve" class="yellow"
+      onclick="document.getElementById('all').style.display = '';document.getElementById('reserveall').style.display = '';document.getElementById('booked').style.display = 'none'">
     <div class="rating">
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
@@ -92,49 +47,65 @@
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star"></span>
     </div>
+    <p id="ratingText">4.2</p>
+    <div id="roopyai">
+    </div>
+    <div id="rooprek">
 
-    <div id="details">
-      <div id="address">
-        location :
-      </div>
-
-
-      <div id="facility1">
-        facility :
-      </div>
-
-      <div id="number_of_customer">
-        People
-      </div>
-
-      <div id="price1">
-        Price
-      </div>
-
-      <div id="landlord">
-        Landlord :
-      </div>
-
-      <div id="phone">
-        tel :
-      </div>
-
-      <div id="email">
-        email :
+    </div>
+    <div id="detailText">
+      <p id="address">Location : </p>
+      <p id="facility1">Facility : </p>
+      <table id="number_of_customer">
+        <tr>
+          <th>guest</th>
+          <th>price</th>
+        </tr>
+      </table>
+      <br><br><br>
+      <div id="fahunder">
+        <p style="font-style:bold">Contact landlord : </p>
+        <p id="landlord">&nbsp;&nbsp;&nbsp;</p>
+        <p id="phone">&nbsp;&nbsp;&nbsp;Phone : </p>
+        <p id="email">&nbsp;&nbsp;&nbsp;Email : </p>
       </div>
     </div>
+  </div>
 
-
-
-    <script>
-      $(document).ready(function () {
-        $('.content').click(function () {
-          $('.content').toggleClass("heart-active")
-          $('.heart').toggleClass("heart-active")
-        });
+  <div id="all" style="display: none;">
+    <div id="bgall"></div>
+    <div id="all2">
+      <div id="reserveall" class="bgWhiteAll" >
+        <p id="textall1">Want to book for
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;person(s)</p>
+        <select id="addNumberHere" onchange="changeValueBook()"></select>
+        <p id="textall2">for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;night(s)</p>
+        <input type="text" id="number_of_night" placeholder=". . ." oninput="changeValueBook()">
+        <img id="calendar1" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_calendar1.png">
+        <input type="date" id="patitin" onchange="changeValueBook()">
+        <p id="textall3">when</p>
+        <div id="linee"></div>
+        <p id="textall4">price : </p>
+        <input type="button" value="Confirm" id="confirmall" onclick="clickBook(this)">
+        <input type="button" value="Cancel" id="cancelall"
+          onclick="document.getElementById('all').style.display = 'none'">
+      </div>
+      <div id="booked" class="bgWhiteAll" style="display: none;">
+        <p style="text-align: center;">Successfully booked. Thank you for using the service.</p>
+        <img id="imageCorrect" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_correct.webp">
+        <input type="button" value="Back" id="backall" onclick="document.getElementById('all').style.display='none';">
+        <input type="button" value="See contract" id="contractall" onclick="clickContract()">
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.content').click(function () {
+        $('.content').toggleClass("heart-active")
+        $('.heart').toggleClass("heart-active")
       });
-    </script>
-
+    });
+  </script>
 
 
 
@@ -142,6 +113,24 @@
 </body>
 
 </html>
+<style>
+  .roopyai {
+    height: 90%;
+    border-radius: 10%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
 
-
-<!-- src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_whiteheart.png" -->
+  .rooprek {
+    position: relative;
+    height: 90%;
+    margin: auto;
+    border-radius: 10%;
+    top: 5%;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+</style>

@@ -1,109 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/public/css/contract.css">
-    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contract</title>
-    <script type="module" src="/public/src/hasTopRightAuth.js"></script>
-    <script type="module" src="/public/src/hotel_edit.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../css/contract.css">
+  <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract</title>
+  <script type="module" src="../src/hasTopRightAuth.js"></script>
+  <script type="module" src="../src/contract.js"></script>
 </head>
+
 <body>
-    <div id="sifah">
-        <p
-          id="hua"
-          onclick="window.location.href='/public/index.html'"
-          onclick="window.location.href='/public/index.html'"
-        >
-          Travarokail
-        </p>
-        
-        <img id="home" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
-              
-      </img>
-        <div id="auth1"  >
-  
-          <div id="roob" onclick="clickProfile()">
-          </div>
-          <p id="username"> username</p>
-          
+  <div id="sifah">
+    <p id="hua" onclick="window.location.href='../index.html'" onclick="window.location.href='../index.html'">
+      Travarokail
+    </p>
+
+    <img id="home" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
+
+    </img>
+    <div id="auth1">
+
+      <div id="roob" onclick="clickProfile()">
       </div>
-        <div id="auth0" style="display: none;" >
-        <input
-          type="button"
-          value="Register"
-          id="regis"
-          class="yellow"
-          onclick="window.location.href='/public/web/register.html'"
-        />
-        <input
-          type="button"
-          value="Sign in"
-          id="signin"
-          class="yellow"
-          onclick="window.location.href='/public/web/signin.html'"
-        />
-      </div>
-    <div id="bady">
-        <div id="bluebox"></div>
-        <div id="yellowbox"></div>
-        <div id="whitebox"></div>
-        <!-- <input id="save"type="button" value="save" onclick="save()"> -->
-        <div class="line1">
-            <div id="linee1"></div>
-            <div id="linee2"></div>
-            <div id="linee3"></div>
-            <div id="linee4"></div>
-            <div id="linee5"></div>
-            <!-- <div id="linee6"></div>
-            <div id="linee7"></div>
-            <div id="linee8"></div> -->
-        </div>
-        <!-- <input id="edit1"type="button" value="Edit">
-        <input id="edit2"type="button" value="Edit">
-        <input id="edit3"type="button" value="Edit">
-        <input id="edit4"type="button" value="Edit">
-        <input id="edit5"type="button" value="Edit">
-        <input id="edit6"type="button" value="Edit">
-        <input id="edit7"type="button" value="Edit"> -->
+      <p id="username"> username</p>
 
-
-
-
-        <!-- <input id="na"type="text" placeholder="Name...">
-        <input id="email"type="text" placeholder="E-mail...">
-        <input id="Phonnumber"type="text" placeholder="Phone number...">
-        <input id="Adrress"type="text" placeholder="Address...">
-        <input id="Facility"type="text" placeholder="Facility..."> -->
-            <div id="idBook">
-                sdaasf4as4as5
-            </div>
-            <div id="hotelname">
-                ไอเฮา
-            </div>
-            <div id="konJong">
-                nutnai
-            </div>
-            <div id="JumnuonKon">
-                20 kon
-            </div>
-            <div id="raka">
-                500bath
-            </div>
-
-
-
-
-
-        
-        <!-- <input id="people"type="text" placeholder="People...">
-        <input id="price"type="text" placeholder="Price...">
-        <input id="image"type="text" placeholder="image..."> -->
-  
-        <p id="personal">Booked</p>
     </div>
-
+    <div id="auth0" style="display: none;">
+      <input type="button" value="Register" id="regis" class="yellow"
+        onclick="window.location.href='../register.html'" />
+      <input type="button" value="Sign in" id="signin" class="yellow" onclick="window.location.href='../signin.html'" />
+    </div>
+    </div>
+  </div>
+  <div id="bluebox"></div>
+  <p id="personal">Contract</p>
+  <div id="information">
+    <div id="yellowbox">
+      <div id="whitebox">
+        <p class="head">ID :</p>
+        <p class="info">loading . . .</p>
+        <div class="line"></div>
+        <p class="head">Hotel name :</p>
+        <p class="info">loading . . .</p>
+        <div class="line"></div>
+        <p class="head">Guest name :</p>
+        <p class="info">loading . . .</p>
+        <div class="line"></div>
+        <p class="head">Number of guest :</p>
+        <p class="info">loading . . .</p>
+        <div class="line"></div>
+        <p class="head">Number of night :</p>
+        <p class="info">loading . . .</p>
+        <div class="line"></div>
+        <p class="head">Date :</p>
+        <p class="info">loading . . .</p>
+        <div class="line"></div>
+        <p class="head">Price :</p>
+        <p class="info">loading . . .</p>
+      </div>
+    </div>
+  </div>
+  <input type="button" id="delete" value="Cancel booking" style="display: none;" onclick="document.getElementById('all').style.display=''";>
+  <div id="all" style="display: none">
+    <div id="bgall"></div>
+    <div id="all2">
+      <div id="booked" class="bgWhiteAll">
+        <p style="text-align: center;">Are you sure you want to cancel this booking?</p>
+        <input type="button" value="Back" id="backall" onclick="document.getElementById('all').style.display='none';">
+        <input type="button" value="Confirm" id="confirmall" onclick="clickDelete()">
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

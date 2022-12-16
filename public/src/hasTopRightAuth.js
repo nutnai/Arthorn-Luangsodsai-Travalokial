@@ -31,15 +31,17 @@ load()
 
 async function clickProfile() {
     console.log("click profile!");
+    var config = "";
+    if (window.location.href.includes("index.html"))config = "/web"
     permission("clickProfile").then((result) => {
         if (result == 0) {
-            window.location.href = "/public/web/profile.html";
+            window.location.href = "."+config+"/Profile.html";
         } else if (result == 1) {
-            window.location.href = "/public/web/hotel admin.html";
+            window.location.href = "."+config+"/hotel admin.html";
         } else if (result == 2) {
-            window.location.href = "/public/web/dashboard.html";
+            window.location.href = "."+config+"/dashboard.html";
         } else {
-            window.location.href = "/public/web/signin.html"
+            window.location.href = "."+config+"/signin.html"
         }
     })
     

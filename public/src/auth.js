@@ -130,7 +130,8 @@ export function signin() {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
-    .then((result) => {
+    .then((result) => { 
+      console.log(result.user.uid);
       get_user(result.user.uid).then((user) => {
         if (user !== undefined) {
           console.log("welcome back, " + user.name);
@@ -138,7 +139,7 @@ export function signin() {
           localStorage.setItem("user_detail",JSON.stringify({id:user.id, name:user.name, image:user.image}))
         } else {
           console.log("First time? welcome, "+result.user.displayName);
-          add_user(result.user.uid, 0, result.user.displayName, result.user.photoURL).then((result) => {
+          add_user(result.user.uid, 0, result.user.displayName, result.user.photoURL, result.user.email).then((result) => {
             localStorage.setItem("isAuth", "yes");
           })
           localStorage.setItem("user_detail",JSON.stringify({id:result.user.uid, name:result.user.displayName, image:result.user.photoURL}))
@@ -166,7 +167,7 @@ export function signout() {
 window.signout = signout;
 
 export function getauth() {
-  if (!localStorage.getItem("isAuth") || !localStorage.getItem("user_detail")) {
+  if (!authed) {
     console.log("please sign in");
     return null;
   } else {

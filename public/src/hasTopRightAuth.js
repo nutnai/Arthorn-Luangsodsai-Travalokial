@@ -32,7 +32,7 @@ load()
 async function clickProfile() {
     console.log("click profile!");
     var config = "";
-    if (!window.location.href.includes("web"))config = "/web"
+    if (!window.location.href.includes("/web"))config = "/web"
     permission("clickProfile").then((result) => {
         if (result == 0) {
             window.location.href = "."+config+"/Profile.html";

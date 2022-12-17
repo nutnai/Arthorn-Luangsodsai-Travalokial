@@ -7,18 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
-    <script src="./src/index.js"></script>
+    <script type="module" src="./src/index.js"></script>
     <script type="module" src="./src/hasTopRightAuth.js"></script>
     <title>homapage</title>
 </head>
 
-<body >
+<body>
     <input type="text" placeholder="input here...">
     <input type="button" value="in">
     <div id="sifah">
         <p id="hua">Travarokail</p>
         <img id="home" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_home.png">
-            
+
         </img>
         <p id="search">Find your next stay...</p>
 
@@ -27,25 +27,15 @@
             <div id="roob" onclick="clickProfile()">
             </div>
             <p id="username"> username</p>
-            
+
         </div>
-        
-        <div id="auth0"  style="display: none;" >
-            <input
-              type="button"
-              value="Register"
-              id="regis"
-              class="yellow"
-              onclick="window.location.href='./web/register.html'"
-            />
-            <input
-              type="button"
-              value="Sign in"
-              id="signin"
-              class="yellow"
-              onclick="window.location.href='./web/signin.html'"
-            />
-          </div>
+
+        <div id="auth0" style="display: none;">
+            <input type="button" value="Register" id="regis" class="yellow"
+                onclick="window.location.href='./web/register.html'" />
+            <input type="button" value="Sign in" id="signin" class="yellow"
+                onclick="window.location.href='./web/signin.html'" />
+        </div>
 
     </div>
     <div id="yellow">
@@ -53,20 +43,22 @@
     </div>
     <div id="whereareyougoing">
         <input type="text" placeholder="where are you going ?" id="w">
-        <img  id = "bed" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_bed.png"> 
-    </img>
+        <img id="bed" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_bed.png">
+        </img>
     </div>
     <div id="calendar">
-        <img  id = "calendar1" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_calendar1.png">
+        <img id="calendar1" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_calendar1.png">
         <input type="date" id="patitin">
-        
+
     </div>
     <div id="guest">
         <input type="text" placeholder="How many are you ?" id="people">
-        <img  id = "person" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_homeperson.png">
-        
+        <img id="person" src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_homeperson.png">
+
     </div>
     <input type="button" value="search" id="pum" class="blue" onclick="clickSearch()">
+    <img src="https://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_photoGroup.jpg" id="weAreTeam" onclick="window.open('https\://storage.googleapis.com/travalokail-55abf.appspot.com/lg/lg_photoGroup.jpg')">
+    <p id="groupName">แลคตาซอย "5" บาท</p>
 </body>
 
 </html>

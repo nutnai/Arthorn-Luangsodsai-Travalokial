@@ -616,7 +616,7 @@ text-align: right;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#backall, #confirmall {
+.backall, .confirmall {
     position: relative;
     
     top: 50px;
@@ -636,6 +636,9 @@ text-align: right;
     border: 0px;
     color: #FFFFFF;   
 }
-#confirmall{
+.confirmall{
     background-color: red;
+}
+#finish2 {
+    background: #4399FF;
 }

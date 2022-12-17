@@ -58,9 +58,9 @@
           <input type="button" id="removeRatePriceButton" value="-" onclick="zone('ratePriceZone','remove')">
           <div id="ratePriceZone">
             <div>
-              <input type="number" class="ratePriceZone" value="-" style="width: 50px;">
+              <input type="number" class="ratePriceZone"  style="width: 50px;">
               <p class="ratePriceZoneText1">person(s)</p>
-              <input type="number" class="ratePriceZone" value="-">
+              <input type="number" class="ratePriceZone" >
               <p class="ratePriceZoneText2">baht</p>
             </div>
           </div>
@@ -72,14 +72,25 @@
       </div>
     </div>
   </div>
-  <input type="button" id="delete" value="delete hotel" style="display: none;" onclick="document.getElementById('all').style.display=''";>
-  <div id="all" style="display: none">
+  <input type="button" id="delete" value="delete hotel" style="display: none;" onclick="document.getElementById('all').style.display='';document.getElementById('booked').style.display=''";>
+  <div id="all" style="display: none;">
     <div id="bgall"></div>
     <div id="all2">
-      <div id="booked" class="bgWhiteAll">
+      <div id="booked" class="bgWhiteAll" style="display: none;">
         <p style="text-align: center;">Are you sure you want to delete this hotel?</p>
-        <input type="button" value="Back" id="backall" onclick="document.getElementById('all').style.display='none';">
-        <input type="button" value="Confirm" id="confirmall" onclick="clickDelete()">
+        <input type="button" value="Back" id="backall" class="backall" onclick="document.getElementById('all').style.display='none';">
+        <input type="button" value="Confirm" id="confirmall" class="confirmall" onclick="clickDelete()">
+      </div>
+      <div id="upload" class="bgWhiteAll" style="display: none;">
+        <p style="text-align: center;">uploading Image</p>
+        <br>
+        <p style="text-align: center;" id="upload1">0/0</p>
+        <p style="text-align: center;" id="upload2">0%</p>
+      </div>
+      <div id="finish" class="bgWhiteAll" style="display: none;">
+        <p style="text-align: center;" id="finish1">Add hotel complete</p>
+        <input type="button" value="Back" class="backall" onclick="window.history.back();">
+        <input type="button" value="Add more" class="confirmall" onclick="window.location.reload();">
       </div>
     </div>
   </div>

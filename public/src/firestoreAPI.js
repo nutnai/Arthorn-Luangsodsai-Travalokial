@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
-import { getFirestore, query, collection, getDocs, doc, setDoc, addDoc, where, getDoc, updateDoc , orderBy, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
+import { getStorage, ref, uploadBytes, uploadBytesResumable, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js';
+import { getFirestore, query, collection, getDocs, doc, setDoc, addDoc, where, getDoc, updateDoc, orderBy, deleteDoc } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js';
+import { MD5 } from './MD5.js';
 
 // web app's Firebase configuration
 const firebaseConfig = {
@@ -138,6 +140,8 @@ export async function add_hotel_list(name, address, number_of_customer, price, f
         id_landlord: id_landlord,
         email: email,
         phone: phone
+    }).then((result) => {
+        localStorage.setItem("add", "yes")
     })
 }
 
@@ -255,27 +259,85 @@ export async function set_user(id_user, name, email, phone, address) {
     });
 }
 
-export async function set_hotel(id_hotel, name, address, number_of_customer, price, facility, image, email, phone) {
+export async function set_hotel(id_hotel, name, address, number_of_customer, price, facility, email, phone) {
     await updateDoc(doc(db, "hotel_list", id_hotel), {
         name: name,
         address: address,
         number_of_customer: number_of_customer,
         price: price,
         facility: facility,
-        image: image,
         email: email,
         phone: phone
+    }).then((result) => {
+        localStorage.setItem("add","yes")
+    })
+}
+export async function set_type_user(id_user, option) {
+    await updateDoc(doc(db, "user_list", id_user), {
+        type: option
     })
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////delete
 
-export async function delete_contract (id_contract) {
+export async function delete_contract(id_contract) {
     await deleteDoc(doc(db, "contract_list", id_contract)).then((result) => {
         return result;
     })
 }
-export async function delete_hotel (id_hotel) {
+export async function delete_hotel(id_hotel) {
     await deleteDoc(doc(db, "hotel_list", id_hotel)).then((result) => {
         return result;
     })
 }
+///////////////////////////////////////////////////////////////////////////////////////////storage
+
+export async function upload_image(file) {
+    const storage = getStorage(app);
+    var date = new Date();
+    var time = date.getTime()
+    var ret = []
+    const metadata = {
+        contentType: 'image/jpeg',
+        acl: [{
+            "entity": "allUsers",
+            "role": "READER"
+        }]
+    };
+
+    // Create the upload options object
+    localStorage.setItem("upload_detail", "0")
+    for (let i = 0; i < file.length; i++) {
+        const img = file[i];
+        const nameImg = "ht_" + MD5(img.name + time) + ".jpg";
+        ret.push(nameImg)
+        var storageRef = ref(storage, "ht/" + nameImg);
+        var uploadTask = uploadBytesResumable(storageRef, img, metadata);
+        uploadTask.on('state_changed',
+            (snapshot) => {
+                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log('Upload is ' + progress + '% done');
+                switch (snapshot.state) {
+                    case 'paused':
+                        console.log('Upload is paused');
+                        break;
+                    case 'running':
+                        console.log('Upload is running');
+                        break;
+                }
+            },
+            (error) => {
+                console.log(error);
+            },
+            () => {
+                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                    var n = parseInt(localStorage.getItem("upload_detail")) + 1;
+                    localStorage.setItem("upload_detail", n)
+                    console.log();
+                });
+            }
+        );
+    }
+    return ret;
+
+}
+// getstorage();
